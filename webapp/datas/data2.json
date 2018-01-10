@@ -1,0 +1,57 @@
+{
+  "chart": {
+    "caption": "Top Paying Programming Languages in the US",
+    "theme": "fint",
+    "xAxisName": "Programming Languages",
+    "yAxisName": "Revenues (In USD)",
+    "numberPrefix": "$",
+    "paletteColors": "#25BCD1",
+    "bgColor": "#ffffff",
+    "borderAlpha": "20",
+    "canvasBorderAlpha": "0",
+    "usePlotGradientColor": "0",
+    "plotBorderAlpha": "10",
+    "placevaluesInside": "1",
+    "rotatevalues": "1",
+    "rotateLabels": "1",
+    "valueFontColor": "#00000",
+    "showXAxisLine": "1",
+    "xAxisLineColor": "#999999",
+    "yAxisLineColor": "#999999",
+    "divLinealpha": "0",
+    "yaxisminvalue": "80000",
+    "showAlternateHGridColor":"1",
+    "showYAxisLine":"1"
+  },
+  "data": [{
+    "label": "Go",
+    "value": "110000"
+  }, {
+    "label": "Scala",
+    "value": "110000"
+  }, {
+    "label": "Objective-C",
+    "value": "109000"
+  }, {
+    "label": "CoffeeScript",
+    "value": "105000"
+  }, {
+    "label": "Perl",
+    "value": "105000"
+  }, {
+    "label": "C++",
+    "value": "100890"
+  }, {
+    "label": "R",
+    "value": "100000"
+  }, {
+    "label": "Swift",
+    "value": "100000"
+  }, {
+    "label": "TypeScript",
+    "value": "100000"
+  }, {
+    "label": "Python",
+    "value": "99000"
+  }]
+}
