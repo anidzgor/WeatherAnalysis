@@ -6,11 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HelloSpring" />
+        <module name="DownloaderResources" />
+        <module name="ParserSources" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DownloaderResources" target="1.8" />
       <module name="HelloSpring" target="1.5" />
+      <module name="ParserSources" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
