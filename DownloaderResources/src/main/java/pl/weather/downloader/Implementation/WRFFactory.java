@@ -66,7 +66,7 @@ public class WRFFactory extends Factory {
                     }
                     else {
                         //list of all files which we want to download
-                        if(file.equals("SHELTER_TEMPERATURE.csv")) {
+                        if(file.equals("SHELTER_TEMPERATURE.csv") || file.equals("current.nfo")) {
                             //System.out.println("File: " + file);
                             URL website = new URL(url + file);
                             Path destination = Paths.get(localFolder + timeStamp + folder + file);
