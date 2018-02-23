@@ -1,31 +1,25 @@
 package pl.parser;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class Station {
-    public String nameStation;
-    public String dateOfObservation;
-    public List<Float> temperatures;
+    private String nameStation;
+    private String dateOfObservation;
+    private Float[] temperatures;
 
     public Station(String nameStation, String dateOfObservation) {
         this.nameStation = nameStation;
         this.dateOfObservation = dateOfObservation;
-        temperatures = new ArrayList<Float>(Collections.nCopies(24,0.0f));
+        temperatures = new Float[24];
+        Arrays.fill(temperatures, 0.0f);
     }
 
-    public void setNameStation(String nameStation) {
-        this.nameStation = nameStation;
+    public String getNameStation() {
+        return nameStation;
     }
 
-    public void setDateOfObservation(String dateOfObservation) {
-        this.dateOfObservation = dateOfObservation;
-    }
-
-    public void addMeasureTemperature(Float result) {
-        temperatures.add(result);
+    public void addMeasureTemperature(int hour, Float result) {
+        temperatures[hour] = result;
     }
 
     @Override
@@ -33,7 +27,7 @@ public class Station {
         return "Station{" +
                 "nameStation='" + nameStation + '\'' +
                 ", dateOfObservation='" + dateOfObservation + '\'' +
-                ", temperatures=" + temperatures +
+                ", temperatures=" + Arrays.toString(temperatures) +
                 '}';
     }
 }

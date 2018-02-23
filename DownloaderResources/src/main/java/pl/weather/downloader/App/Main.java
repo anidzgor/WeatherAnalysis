@@ -9,13 +9,11 @@ public class Main {
     public static void main(String[] args) {
 
         Factory factory;
+//        factory = new SYNOPFactory();
+//        ISources model = factory.CreateModel();
 
-//        factory = new WRFFactory();
-//        ISources data = factory.CreateModel();
-
-        factory = new SYNOPFactory();
-        ISources model = factory.CreateModel();
-
+        factory = new WRFFactory();
+        ISources data = factory.CreateModel();
 //        factory = new WRFFactory();
 //        model = factory.CreateModel();
 
