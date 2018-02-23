@@ -9,13 +9,26 @@ public class Main {
     public static void main(String[] args) {
 
         Factory factory;
-//        factory = new SYNOPFactory();
-//        ISources model = factory.CreateModel();
+        ISources model;
 
-        factory = new WRFFactory();
-        ISources data = factory.CreateModel();
-//        factory = new WRFFactory();
+        //For Linux
+        //Synop
+        if(args.length == 0) {
+            factory = new SYNOPFactory();
+            model = factory.CreateModel();
+        } else {
+            //WRF
+            factory = new WRFFactory();
+            model = factory.CreateModel();
+        }
+        
+        //For Windows
+        //Synop
+//        factory = new SYNOPFactory();
 //        model = factory.CreateModel();
+        //WRF
+//        factory = new WRFFactory();
+//        data = factory.CreateModel();
 
     }
 }
