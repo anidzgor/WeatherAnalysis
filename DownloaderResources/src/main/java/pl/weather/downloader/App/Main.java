@@ -21,7 +21,7 @@ public class Main {
             factory = new WRFFactory();
             model = factory.CreateModel();
         }
-        
+
         //For Windows
         //Synop
 //        factory = new SYNOPFactory();
