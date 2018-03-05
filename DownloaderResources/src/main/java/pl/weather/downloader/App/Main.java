@@ -13,22 +13,22 @@ public class Main {
 
         //For Linux
         //Synop
-        if(args.length == 0) {
-            factory = new SYNOPFactory();
-            model = factory.CreateModel();
-        } else {
-            //WRF
-            factory = new WRFFactory();
-            model = factory.CreateModel();
-        }
+//        if(args.length == 0) {
+//            factory = new SYNOPFactory();
+//            model = factory.CreateModel();
+//        } else {
+//            //WRF
+//            factory = new WRFFactory();
+//            model = factory.CreateModel();
+//        }
 
         //For Windows
         //Synop
-//        factory = new SYNOPFactory();
-//        model = factory.CreateModel();
+        factory = new SYNOPFactory();
+        model = factory.CreateModel();
         //WRF
-//        factory = new WRFFactory();
-//        data = factory.CreateModel();
+        factory = new WRFFactory();
+        model = factory.CreateModel();
 
     }
 }

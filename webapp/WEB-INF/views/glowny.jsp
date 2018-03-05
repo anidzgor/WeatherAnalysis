@@ -22,7 +22,7 @@
             "900","350",// chartWidth, chartHeight
             "chart",// chartContainer
             "jsonurl",// dataFormat
-            "../../datas/data.json"
+            "../../datas/diff.json"
     );
 
 %>
