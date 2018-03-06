@@ -7,34 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d998cfd-799a-47a8-b53a-33e4f0545e57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF/WRF_Processing.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/MapCSV.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/PointMap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/places.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/datas/diff.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF_Processing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/SynopXML.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/WRF_Processing.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/SynopXML.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Api/Factory.class" afterPath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Api/Factory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/App/Main.class" afterPath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/App/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/WRFFactory$WRFSources.class" afterPath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/WRFFactory$WRFSources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Station.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Station.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Synop/Synop_Processing$1.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Synop/Synop_Processing$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Synop/Synop_Processing.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Synop/Synop_Processing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/regression/Process.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/regression/Process.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" afterPath="$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Api/Factory.java" afterPath="$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Api/Factory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/App/Main.java" afterPath="$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/App/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloSpring.iml" afterPath="$PROJECT_DIR$/HelloSpring.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/ParserSources.iml" afterPath="$PROJECT_DIR$/ParserSources/ParserSources.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/pom.xml" afterPath="$PROJECT_DIR$/ParserSources/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/views/glowny.jsp" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/views/glowny.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/glowny.jsp" afterPath="$PROJECT_DIR$/webapp/WEB-INF/views/glowny.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/places.xml" afterPath="$PROJECT_DIR$/src/main/resources/places.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,14 +34,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Process.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Process.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-              <folding>
-                <element signature="e#577#672#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapCSV.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/MapCSV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,8 +57,8 @@
       <file leaf-file-name="PointMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/PointMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,15 +67,10 @@
       <file leaf-file-name="Station.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="486">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
                 <element signature="e#808#809#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,10 +79,28 @@
       <file leaf-file-name="Synop_Processing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+            <state relative-caret-position="420">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="method#getStation#0;class#Synop_Processing#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputSource.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/InputSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+              <folding>
+                <element signature="e#3459#3460#0" expanded="true" />
+                <element signature="e#3496#3497#0" expanded="true" />
+                <element signature="e#5427#5428#0" expanded="true" />
+                <element signature="e#5458#5459#0" expanded="true" />
+                <element signature="e#6518#6519#0" expanded="true" />
+                <element signature="e#6558#6559#0" expanded="true" />
+                <element signature="e#7034#7035#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +109,20 @@
       <file leaf-file-name="WRF_Processing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF/WRF_Processing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="50" />
+            <state relative-caret-position="297">
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding>
+                <element signature="method#getStation#0;class#WRF_Processing#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVReader.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVReader.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4515">
+              <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,15 +193,15 @@
         <option value="$PROJECT_DIR$/webapp/datas/data.json" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/views/glowny.jsp" />
         <option value="$PROJECT_DIR$/webapp/datas/diff.json" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/places.xml" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java" />
         <option value="$PROJECT_DIR$/ParserSources/pom.xml" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF/WRF_Processing.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/MapCSV.java" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/PointMap.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/places.xml" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java" />
       </list>
     </option>
   </component>
@@ -211,7 +224,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="1920" />
     <option name="height" value="1030" />
@@ -232,6 +245,9 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -354,9 +370,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -771,14 +784,16 @@
       <workItem from="1520096160472" duration="9855000" />
       <workItem from="1520151839798" duration="2456000" />
       <workItem from="1520173954674" duration="668000" />
+      <workItem from="1520281192882" duration="2083000" />
+      <workItem from="1520333882886" duration="3383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162123000" />
+    <option name="totallyTimeSpent" value="167589000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -800,11 +815,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33254716" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33254716" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31364125" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32330826" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -841,7 +856,7 @@
           <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="151" />
+      <option name="time" value="156" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1080,34 +1095,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParserSources/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/InputSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1125,10 +1116,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/MapCSV.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVReader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="59" column="23" lean-forward="false" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="4515">
+          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/InputSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+          <folding>
+            <element signature="e#3459#3460#0" expanded="true" />
+            <element signature="e#3496#3497#0" expanded="true" />
+            <element signature="e#5427#5428#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
+            <element signature="e#6518#6519#0" expanded="true" />
+            <element signature="e#6558#6559#0" expanded="true" />
+            <element signature="e#7034#7035#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF/WRF_Processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="method#getStation#0;class#WRF_Processing#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/GenerateJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2079">
+          <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,52 +1168,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/PointMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Synop/Synop_Processing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+        <state relative-caret-position="420">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="method#getStation#0;class#Synop_Processing#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Station.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="30" column="38" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/WRF/WRF_Processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="50" />
+        <state relative-caret-position="190">
+          <caret line="41" column="50" lean-forward="true" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/Process.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/regression/MapCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-          <folding>
-            <element signature="e#577#672#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="112">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

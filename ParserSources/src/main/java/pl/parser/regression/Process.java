@@ -8,10 +8,9 @@ import pl.parser.WRF.WRF_Processing;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import static javafx.scene.input.KeyCode.L;
 
@@ -33,13 +32,18 @@ public class Process {
 
         //For case when we analyze 1 hour back so we got 1 temperature
 
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        Date date = new Date();
+        System.out.println(dateFormat.format(date)); //2016-11-16_12-08-43
+        String dateTemporary = "2018-02-25-14-49";  //For tests
+
         MapCSV map = new MapCSV();
         String[] cities = map.getAllAvailableStation("src/main/resources/places.xml");
         List<PointMap> points = new ArrayList<>();
 
         for(String nameStation : cities) {
-            Station wrf = WRF_Processing.getTemperatures(nameStation, "2018-02-25_15-30-00", 1);
-            Station synop = Synop_Processing.getTemperatures(nameStation, "2018-02-25_15-30-00", 1);
+            Station wrf = WRF_Processing.getTemperatures(nameStation, dateTemporary, 1);
+            Station synop = Synop_Processing.getTemperatures(nameStation, dateTemporary, 1);
 
             PointMap p = new PointMap(Math.abs(wrf.getTemperatures(wrf.getHoursMeasures()) -
                     synop.getTemperatures(synop.getHoursMeasures())), wrf.getCoordinatesCSV());

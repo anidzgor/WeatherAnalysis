@@ -42,10 +42,12 @@ public class Synop_Processing {
             }
             Arrays.sort(hours);
 
-            //int[] backHoursTable = new int[backHours];
-            for(int i = 0; i < backHoursTable.length; i++) {
-                backHoursTable[i] = hours[hours.length - i - 1];
+            String hourFromString = currentTime.substring(11, 13);
+            int hour = Integer.parseInt(hourFromString);
+            for(int i = 0; i < backHours; i++) {
+                backHoursTable[i] = hour - i;
             }
+
             //Files which we want to analyze
             fs = directory.listFiles(new FilenameFilter() {
                 @Override

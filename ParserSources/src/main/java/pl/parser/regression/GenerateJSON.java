@@ -53,13 +53,6 @@ public class GenerateJSON {
         for (int i = 0; i < synop.length; i++) {
             labels.add(Json.createObjectBuilder().add("label", String.valueOf(i)));
         }
-
-//        labels.add(Json.createObjectBuilder().add("label", "Mon"));
-//        labels.add(Json.createObjectBuilder().add("label", "Tue"));
-//        labels.add(Json.createObjectBuilder().add("label", "Wed"));
-//        labels.add(Json.createObjectBuilder().add("label", "Thu"));
-//        labels.add(Json.createObjectBuilder().add("label", "Fri"));
-//        labels.add(Json.createObjectBuilder().add("label", "Sat"));
         JsonArray category = labels.build();
         JsonObjectBuilder jsonCat = Json.createObjectBuilder();
         JsonObject obj2 = jsonCat.add("category", category).build();
@@ -74,13 +67,6 @@ public class GenerateJSON {
         for(int i = 0; i < wrf.length; i++)
             valuesWRF.add(Json.createObjectBuilder().add("value", wrf[i]));
 
-
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "15"));
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "14"));
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "18"));
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "19"));
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "15"));
-//        valuesWRF.add(Json.createObjectBuilder().add("value", "20"));
         JsonArray data = valuesWRF.build();
 
         JsonObjectBuilder jsonData = Json.createObjectBuilder();
@@ -96,12 +82,7 @@ public class GenerateJSON {
         JsonArrayBuilder valuesSynop = Json.createArrayBuilder();
         for(int i = 0; i < synop.length; i++)
             valuesSynop.add(Json.createObjectBuilder().add("value", synop[i]));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "15"));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "14"));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "18"));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "19"));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "15"));
-//        valuesSynop.add(Json.createObjectBuilder().add("value", "25"));
+
         JsonArray dataSynop = valuesSynop.build();
 
         JsonObjectBuilder jsonDataSynop = Json.createObjectBuilder();
