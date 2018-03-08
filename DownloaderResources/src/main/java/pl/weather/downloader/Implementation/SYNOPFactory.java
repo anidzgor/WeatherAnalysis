@@ -23,6 +23,10 @@ public class SYNOPFactory extends Factory {
         @Override
         public void getFiles(String url, String folder, String timeStamp) {
 
+            int hour = Integer.parseInt(timeStamp.substring(11, 13));
+            hour--;
+            timeStamp = timeStamp.substring(0, 11) + hour;
+
             URL website = null;
             boolean ifCreate = new File(folder + timeStamp).mkdirs();
             try {
@@ -30,6 +34,7 @@ public class SYNOPFactory extends Factory {
             } catch (MalformedURLException e1) {
                 e1.printStackTrace();
             }
+
 
             String fileName = timeStamp + ".xml";
             timeStamp += "/";
@@ -49,7 +54,7 @@ public class SYNOPFactory extends Factory {
         SYNOPSources sp = new SYNOPSources();
         String url = "https://danepubliczne.imgw.pl/api/data/synop/format/xml";
         localFolder += "SYNOP/";
-        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getTime());
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH").format(Calendar.getInstance().getTime());
         sp.getFiles(url, localFolder, timeStamp);
         return sp;
     }
