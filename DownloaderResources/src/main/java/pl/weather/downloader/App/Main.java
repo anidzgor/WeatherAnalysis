@@ -12,7 +12,7 @@ public class Main {
         ISources model;
 
         //For Linux
-        //Synop
+        //Implementation
 //        if(args.length == 0) {
 //            factory = new SYNOPFactory();
 //            model = factory.CreateModel();
@@ -23,7 +23,7 @@ public class Main {
 //        }
 
         //For Windows
-        //Synop
+        //Implementation
         factory = new SYNOPFactory();
         model = factory.CreateModel();
         //WRF

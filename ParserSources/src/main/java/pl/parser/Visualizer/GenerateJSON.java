@@ -1,6 +1,4 @@
-package pl.parser.regression;
-
-import pl.parser.Station;
+package pl.parser.Visualizer;
 
 import javax.json.*;
 import java.io.FileWriter;
@@ -8,9 +6,6 @@ import java.io.IOException;
 import java.io.StringWriter;
 
 public class GenerateJSON {
-
-    public static void main(String[] args) {
-    }
 
     public static void generateJSON(double[] wrf, double[] synop) {
 
@@ -78,7 +73,7 @@ public class GenerateJSON {
         dataset.add(jData);
 
         //Dataset
-        //Synop
+        //Implementation
         JsonArrayBuilder valuesSynop = Json.createArrayBuilder();
         for(int i = 0; i < synop.length; i++)
             valuesSynop.add(Json.createObjectBuilder().add("value", synop[i]));

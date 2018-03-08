@@ -1,10 +1,11 @@
-package pl.parser.regression;
+package pl.parser.Application;
 
-import org.apache.commons.math3.util.Precision;
 import org.xml.sax.SAXException;
-import pl.parser.Station;
-import pl.parser.Synop.Synop_Processing;
-import pl.parser.WRF.WRF_Processing;
+import pl.parser.Domain.Station;
+import pl.parser.Implementation.SynopComponent;
+import pl.parser.Implementation.WRFComponent;
+import pl.parser.Implementation.MapCreator;
+import pl.parser.Domain.PointMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
@@ -12,9 +13,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static javafx.scene.input.KeyCode.L;
-
-public class Process {
+public class Main {
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
 
@@ -31,25 +30,27 @@ public class Process {
 //        GenerateJSON.generateJSON(wrf.getTemp(), synop.getTemp());
 
         //For case when we analyze 1 hour back so we got 1 temperature
-
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
         Date date = new Date();
-        System.out.println(dateFormat.format(date)); //2016-11-16_12-08-43
-        String dateTemporary = "2018-02-25-14-49";  //For tests
+        System.out.println(dateFormat.format(date)); //2018-02_25-14-49
+        String dateTemporary = "2018-02-25_13-49-00";  //For tests
 
-        MapCSV map = new MapCSV();
-        String[] cities = map.getAllAvailableStation("src/main/resources/places.xml");
+        MapCreator map = new MapCreator();
+        WRFComponent wrfComponent = new WRFComponent();
+        SynopComponent synopComponent = new SynopComponent();
+
+        String[] cities = map.getStationFromXML("src/main/resources/places.xml");
         List<PointMap> points = new ArrayList<>();
 
         for(String nameStation : cities) {
-            Station wrf = WRF_Processing.getTemperatures(nameStation, dateTemporary, 1);
-            Station synop = Synop_Processing.getTemperatures(nameStation, dateTemporary, 1);
+            Station wrf = wrfComponent.getTemperatures(nameStation, dateTemporary, 1);
+            Station synop = synopComponent.getTemperatures(nameStation, dateTemporary, 1);
 
             PointMap p = new PointMap(Math.abs(wrf.getTemperatures(wrf.getHoursMeasures()) -
                     synop.getTemperatures(synop.getHoursMeasures())), wrf.getCoordinatesCSV());
             points.add(p);
         }
-
-       map.createCSV("C:/KSG/file.csv", points);
+       map.createCSV("Excel/file.csv", points);
+        map.createMapImage();
     }
 }

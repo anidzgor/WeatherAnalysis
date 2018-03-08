@@ -1,4 +1,4 @@
-package pl.parser;
+package pl.parser.Domain;
 
 import java.util.Arrays;
 
@@ -30,7 +30,7 @@ public class Station {
 
     public void initialiazeCoordinates(int [] coord) {
         coordinatesCSV = coord;
-    }
+     }
 
     public double[] getTemp() {
         return temperatures;

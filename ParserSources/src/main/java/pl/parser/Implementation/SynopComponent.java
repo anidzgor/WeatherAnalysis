@@ -1,4 +1,4 @@
-package pl.parser.Synop;
+package pl.parser.Implementation;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -14,13 +14,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import pl.parser.Station;
+import pl.parser.Api.IComponent;
+import pl.parser.Domain.Station;
 
-public class Synop_Processing {
+public class SynopComponent implements IComponent {
     public static String pathSources = "C:/KSG/SYNOP/";
 
-    //Get temperatures from specific hours back
-    public static Station getTemperatures(String nameStation, String currentTime, int backHours) {
+    public Station getTemperatures(String nameStation, String currentTime, int backHours) {
         //Check day
         String day = currentTime.substring(0, 10);
 
@@ -49,19 +49,16 @@ public class Synop_Processing {
             }
 
             //Files which we want to analyze
-            fs = directory.listFiles(new FilenameFilter() {
-                @Override
-                public boolean accept(File dir, String name) {
-                    String prefix;
-                    for(int i: backHoursTable) {
-                        prefix = "";
-                        if(i <= 9 && i >= 0)
-                            prefix = "0";
-                        if(name.startsWith(day + "_" + prefix + i))
-                            return true;
-                    }
-                    return false;
+            fs = directory.listFiles((dir, name) -> {
+                String prefix;
+                for(int i: backHoursTable) {
+                    prefix = "";
+                    if(i <= 9 && i >= 0)
+                        prefix = "0";
+                    if(name.startsWith(day + "_" + prefix + i))
+                        return true;
                 }
+                return false;
             });
         }//else
 
@@ -114,7 +111,7 @@ public class Synop_Processing {
     }
 
     //Analyze one day from hour 0 to current
-    public static Station getStation(String nameStation, final String date) {
+    public Station getStation(String nameStation, final String date) {
         Station station = new Station(nameStation, date);
 
         //Files from one day
