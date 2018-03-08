@@ -1,28 +1,26 @@
-package pl.parser.WRF;
+package pl.parser.Implementation;
 
 import com.opencsv.CSVReader;
-import com.opencsv.CSVWriter;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import pl.parser.Station;
+import pl.parser.Api.IComponent;
+import pl.parser.Domain.Station;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class WRF_Processing {
+public class WRFComponent implements IComponent {
     public static String pathSources = "C:/KSG/WRF/";
 
     //For one day from hour 0 to current
-    public static Station getStation(String nameStation, final String date) throws IOException {
+    public Station getStation(String nameStation, final String date) {
         Station station = new Station(nameStation, date);
         int[] coordinates = new int[0];
         try {
@@ -30,6 +28,8 @@ public class WRF_Processing {
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -70,7 +70,7 @@ public class WRF_Processing {
         return station;
     }
 
-    private static int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
+    private int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
 
         File file = new File("src/main/resources/places.xml");
 
@@ -109,15 +109,12 @@ public class WRF_Processing {
         String result = csvBody.get(row+1)[col+1];
 
         double celsius = Float.parseFloat(result) - 273.15;
-        DecimalFormat f = new DecimalFormat("#.00");
-        //System.out.println("Celsjusz: " + f.format(celsius));
         reader.close();
 
         return new Float(celsius);
     }
 
-    //Get temperatures from specific hours back
-    public static Station getTemperatures(String nameStation, String currentTime, int backHours) {
+    public Station getTemperatures(String nameStation, String currentTime, int backHours) {
         Station station = new Station(nameStation, currentTime);
         int[] coordinates = new int[0];
         try {
@@ -150,7 +147,10 @@ public class WRF_Processing {
             newestFolder += "/" + parseDate.substring(2, 4);
 
         //Set day
-        newestFolder += "/" + parseDate.substring(4, 6);
+        if(parseDate.charAt(4) == '0')
+            newestFolder += "/" + parseDate.substring(5, 6);
+        else
+            newestFolder += "/" + parseDate.substring(4, 6);
 
         //Set hours
         directory = new File(pathSources + newestFolder);
