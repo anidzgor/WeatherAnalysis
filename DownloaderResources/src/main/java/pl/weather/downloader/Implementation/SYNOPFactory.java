@@ -25,10 +25,18 @@ public class SYNOPFactory extends Factory {
 
             int hour = Integer.parseInt(timeStamp.substring(11, 13));
             hour--;
-            timeStamp = timeStamp.substring(0, 11) + hour;
+
+            //Special case for hour 23 - we don't have a data for this file
+            if(hour == -1)
+                return;
+
+            if(hour >= 0 && hour <= 9)
+                timeStamp = timeStamp.substring(0, 11) + "0" + hour;
+            else
+                timeStamp = timeStamp.substring(0, 11) + hour;
 
             URL website = null;
-            boolean ifCreate = new File(folder + timeStamp).mkdirs();
+            //boolean ifCreate = new File(folder + timeStamp).mkdirs();
             try {
                 website = new URL("https://danepubliczne.imgw.pl/api/data/synop/format/xml");
             } catch (MalformedURLException e1) {
@@ -37,8 +45,7 @@ public class SYNOPFactory extends Factory {
 
 
             String fileName = timeStamp + ".xml";
-            timeStamp += "/";
-            Path destination = Paths.get(folder + timeStamp + fileName);
+            Path destination = Paths.get(folder + fileName);
 
             try (InputStream in = website.openStream()) {
                 Files.copy(in, destination, StandardCopyOption.REPLACE_EXISTING);
