@@ -125,7 +125,7 @@ public class MapCreator implements IMapCreator {
         writer.close();
     }
 
-    public void createMapImage() throws IOException {
+    public void createMapImage(String date) throws IOException {
         BufferedImage image = new BufferedImage(650, 510, BufferedImage.TYPE_INT_RGB);
 
         Color[][]colors = new Color[510][650];
@@ -140,36 +140,34 @@ public class MapCreator implements IMapCreator {
 
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++) {
-
-            //white
-            if(array[y][x] == 0.0) {
-                r = g = b = 255;
-            } else if(array[y][x] > 0.0 && array[y][x] <= 0.5) { //yellow light
-                r = 252;
-                g = 252;
-                b = 176;
-            } else if(array[y][x] > 0.5 && array[y][x] <= 1.0) { //yellow
-                r = 247;
-                g = 247;
-                b = 45;
-            } else if(array[y][x] > 1.0 && array[y][x] <= 1.5) { //orange light
-                r = 252;
-                g = 196;
-                b = 84;
-            } else if(array[y][x] > 1.5 && array[y][x] <= 2.0) {  //orange
-                r = 239;
-                g = 149;
-                b = 15;
-            } else if(array[y][x] > 2.0 && array[y][x] <= 3.0) {    //red light
-                r = 253;
-                g = 72;
-                b = 17;
-            } else if(array[y][x] > 3.0) {
-                r = 232;
-                g = 34;
-                b = 12;
-            } else
-                r = g = b = 0;
+                if(array[y][x] == 0.0) {    //white
+                    r = g = b = 255;
+                } else if(array[y][x] > 0.0 && array[y][x] <= 0.5) { //yellow light
+                    r = 252;
+                    g = 252;
+                    b = 176;
+                } else if(array[y][x] > 0.5 && array[y][x] <= 1.0) { //yellow
+                    r = 247;
+                    g = 247;
+                    b = 45;
+                } else if(array[y][x] > 1.0 && array[y][x] <= 1.5) { //orange light
+                    r = 252;
+                    g = 196;
+                    b = 84;
+                } else if(array[y][x] > 1.5 && array[y][x] <= 2.0) {  //orange
+                    r = 239;
+                    g = 149;
+                    b = 15;
+                } else if(array[y][x] > 2.0 && array[y][x] <= 3.0) {    //red light
+                    r = 253;
+                    g = 72;
+                    b = 17;
+                } else if(array[y][x] > 3.0) {
+                    r = 232;
+                    g = 34;
+                    b = 12;
+                } else
+                    r = g = b = 0;
 
                 Color newColor = new Color(r, g, b);
 
@@ -188,14 +186,17 @@ public class MapCreator implements IMapCreator {
                 image.setRGB(2 * x, heightImage - 3 - 3 * y, newColor.getRGB());
                 image.setRGB(2 * x + 1, heightImage - 3 - 3 * y, newColor.getRGB());
             }
-        ImageIO.write(image, "JPG", new File(pathResources + pathVisualization + "mapImage.jpg"));
 
-        overlay();
+        String folderForLayers = pathResources + pathVisualization + "Layers/";
+        new File(folderForLayers).mkdirs();
+        ImageIO.write(image, "JPG", new File(folderForLayers + date + ".jpg"));
+
+        overlay(date, folderForLayers);
     }
 
-    public void overlay() throws IOException {
+    public void overlay(String date, String folder) throws IOException {
         // load source images
-        BufferedImage image = ImageIO.read(new File(pathResources + pathVisualization + "mapImage.jpg"));
+        BufferedImage image = ImageIO.read(new File(folder + date + ".jpg"));
         BufferedImage overlay = ImageIO.read(new File(pathResources + pathVisualization + "layer.png"));
 
         // create the new image, canvas size is the max. of both image sizes
@@ -209,7 +210,8 @@ public class MapCreator implements IMapCreator {
         g.drawImage(overlay, 0, 0, null);
 
         //Save as new image
-        //name of file must be a data - to fix
-        ImageIO.write(combined, "PNG", new File(pathResources + pathVisualization + "combined2.png"));
+        String folderForMaps = pathResources + pathVisualization + "Maps/";
+        new File(folderForMaps).mkdirs();
+        ImageIO.write(combined, "PNG", new File(folderForMaps + date + ".png"));
     }
 }

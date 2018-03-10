@@ -43,7 +43,6 @@ public class SYNOPFactory extends Factory {
                 e1.printStackTrace();
             }
 
-
             String fileName = timeStamp + ".xml";
             Path destination = Paths.get(folder + fileName);
 

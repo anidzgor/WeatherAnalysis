@@ -19,57 +19,6 @@ import java.util.List;
 public class WRFComponent implements IComponent {
     public static String pathSources = "C:/KSG/WRF/";
 
-    //For one day from hour 0 to current
-    public Station getStation(String nameStation, final String date) {
-        Station station = new Station(nameStation, date);
-        int[] coordinates = new int[0];
-        try {
-            coordinates = getCoordinates(nameStation);
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String parseDate = date.replace("-", "");
-        parseDate = parseDate.substring(2);
-        final String newParsedata = parseDate;
-        //Check for all existing folders for one day and choose newest
-        File directory = new File(pathSources);
-        File [] files = directory.listFiles((d, name) -> name.contains(newParsedata));
-
-        String newestFolder = "";
-        for(File file: files) {
-            newestFolder = file.getName();
-        }
-
-        //Set month
-        if(parseDate.substring(2, 4).startsWith("0"))
-            newestFolder += "/" + parseDate.substring(3, 4);
-        else
-            newestFolder += "/" + parseDate.substring(2, 4);
-
-        //Set day
-        newestFolder += "/" + parseDate.substring(4, 6);
-
-        //Set hours
-        directory = new File(pathSources + newestFolder);
-        File [] foldersWithHours = directory.listFiles();
-
-        for(File file: foldersWithHours) {
-            Float temperature = new Float(0.0);
-            try {
-                temperature = readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            station.addMeasureTemperature(Integer.parseInt(file.getName()), temperature);
-        }
-        return station;
-    }
-
     private int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
 
         File file = new File("src/main/resources/places.xml");
@@ -114,8 +63,8 @@ public class WRFComponent implements IComponent {
         return new Float(celsius);
     }
 
-    public Station getTemperatures(String nameStation, String currentTime, int backHours) {
-        Station station = new Station(nameStation, currentTime);
+    public Station getTemperatures(String nameStation, String dateMeasure) {
+        Station station = new Station(nameStation, dateMeasure);
         int[] coordinates = new int[0];
         try {
             coordinates = getCoordinates(nameStation);
@@ -128,7 +77,7 @@ public class WRFComponent implements IComponent {
         }
         station.initialiazeCoordinates(coordinates);
 
-        String parseDate = currentTime.replace("-", "");
+        String parseDate = dateMeasure.replace("-", "");
         parseDate = parseDate.substring(2, 8);
         final String newParsedata = parseDate;
         //Check for all existing folders for one day and choose newest
@@ -152,38 +101,13 @@ public class WRFComponent implements IComponent {
         else
             newestFolder += "/" + parseDate.substring(4, 6);
 
-        //Set hours
-        directory = new File(pathSources + newestFolder);
+        //Set hour and choose properly file
+        File file = new File(pathSources + newestFolder + "/" + Integer.parseInt(dateMeasure.substring(11, 13)));
 
-        int[] table = new int[backHours];
-
-        String hourFromString = currentTime.substring(11, 13);
-        int hour = Integer.parseInt(hourFromString) - 1;
-        for(int i = 0; i < backHours; i++) {
-            table[i] = hour - i;
-        }
-
-        station.initializeAnalyzesHours(table);
-
-        File [] foldersWithHours = directory.listFiles(new FilenameFilter() {
-            @Override
-            public boolean accept(File dir, String name) {
-                for(int i = 0; i < backHours; i++) {
-                    if(name.startsWith(table[i] + ""))
-                        return true;
-                }
-                return false;
-            }
-        });
-
-        for(File file: foldersWithHours) {
-            Float temperature = new Float(0.0);
-            try {
-                temperature = readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            station.addMeasureTemperature(Integer.parseInt(file.getName()), temperature);
+        try {
+            station.setTemperature(readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return station;

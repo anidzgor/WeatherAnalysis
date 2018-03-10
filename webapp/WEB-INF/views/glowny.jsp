@@ -12,21 +12,39 @@
 </head>
 <body>
 
-<div class="row">
-    <div class="text-center" id="chart"></div>
-</div>
-<%
-    FusionCharts lineChart = new FusionCharts(
-            "msline",// chartType
-            "chart1",// chartId
-            "900","350",// chartWidth, chartHeight
-            "chart",// chartContainer
-            "jsonurl",// dataFormat
-            "../../datas/diff.json"
-    );
+<%@include file="header.html" %>
 
-%>
-<%=lineChart.render()%>
+<form:select path="country" items="${countryList}" />
+
+<div class="container-fluid">
+    <div class="row">
+        <label for="dessert">Wybierz datę</label>
+        <select id="dessert">
+            <option>16 marzec 2018</option>
+            <option>16 marzec 2018</option>
+            <option>16 marzec 2018</option>
+        </select>
+        <div class="text-center"><img src="../../2018-03-09_05.png" alt="Map" height="510" width="650" /></div>
+    </div>
+</div>
+
+
+
+<%--<div class="row">--%>
+    <%--<div class="text-center" id="chart"></div>--%>
+<%--</div>--%>
+<%--<%--%>
+    <%--FusionCharts lineChart = new FusionCharts(--%>
+            <%--"msline",// chartType--%>
+            <%--"chart1",// chartId--%>
+            <%--"900","350",// chartWidth, chartHeight--%>
+            <%--"chart",// chartContainer--%>
+            <%--"jsonurl",// dataFormat--%>
+            <%--"../../datas/diff.json"--%>
+    <%--);--%>
+
+<%--%>--%>
+<%--<%=lineChart.render()%>--%>
 
 </body>
 </html>

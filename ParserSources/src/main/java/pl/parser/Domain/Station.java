@@ -1,51 +1,34 @@
 package pl.parser.Domain;
 
-import java.util.Arrays;
-
 public class Station {
     private String nameStation;
     private String dateOfObservation;
-    private double[] temperatures;
-    private int[] hoursMeasures;
+    private double temperature;
     private int[] coordinatesCSV;
 
     public Station(String nameStation, String dateOfObservation) {
         this.nameStation = nameStation;
         this.dateOfObservation = dateOfObservation;
-        temperatures = new double[24];
-        Arrays.fill(temperatures, 0.0f);
     }
 
     public int[] getCoordinatesCSV() {
         return coordinatesCSV;
     }
 
-    public void initializeAnalyzesHours(int []hoursMeasures) {
-        this.hoursMeasures = hoursMeasures;
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
     }
 
-    public int getHoursMeasures() {
-        return hoursMeasures[0];
+    public double getTemperature() {
+        return temperature;
     }
 
     public void initialiazeCoordinates(int [] coord) {
         coordinatesCSV = coord;
      }
 
-    public double[] getTemp() {
-        return temperatures;
-    }
-
-    public double getTemperatures(int hour) {
-        return temperatures[hour];
-    }
-
     public String getNameStation() {
         return nameStation;
-    }
-
-    public void addMeasureTemperature(int hour, Float result) {
-        temperatures[hour] = result;
     }
 
     @Override
@@ -53,7 +36,7 @@ public class Station {
         return "Station{" +
                 "nameStation='" + nameStation + '\'' +
                 ", dateOfObservation='" + dateOfObservation + '\'' +
-                ", temperatures=" + Arrays.toString(temperatures) +
+                ", temperature=" + temperature +
                 '}';
     }
 }

@@ -10,9 +10,9 @@
         <module name="ParserSources" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="DownloaderResources" target="1.8" />
-      <module name="HelloSpring" target="1.5" />
+      <module name="HelloSpring" target="1.8" />
       <module name="ParserSources" target="1.8" />
     </bytecodeTargetLevel>
   </component>
