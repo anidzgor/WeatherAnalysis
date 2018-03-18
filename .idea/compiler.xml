@@ -11,9 +11,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="demo" target="1.8" />
       <module name="DownloaderResources" target="1.8" />
-      <module name="HelloSpring" target="1.8" />
+      <module name="HelloSpring" target="1.6" />
       <module name="ParserSources" target="1.8" />
+      <module name="webvisualizer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

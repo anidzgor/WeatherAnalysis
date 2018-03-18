@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" filepath="$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloSpring.iml" filepath="$PROJECT_DIR$/HelloSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/ParserSources/ParserSources.iml" filepath="$PROJECT_DIR$/ParserSources/ParserSources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webvisualizer/webvisualizer.iml" filepath="$PROJECT_DIR$/webvisualizer/webvisualizer.iml" />
     </modules>
   </component>
 </project>

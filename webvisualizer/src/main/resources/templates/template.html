@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="header">
+
+    <title th:text="${title}">Hello, Spring</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/js/script.js}"></script>
+    <script th:src="@{/js/fusioncharts.js}"></script>
+    <script th:src="@{/js/fusioncharts.charts.js}"></script>
+    <script th:src="@{/js/fusioncharts.theme.fint.js}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <title>Hello, Spring</title>
+</head>
+
+<nav th:fragment="navbar" class="navbar navbar-default" >
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Weather prediction</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/home">Mapy temperatur</a></li>
+            <li><a href="/charts">Wykresy</a></li>
+        </ul>
+    </div>
+</nav>
+
+<footer class="footer text-center" th:fragment="footer">
+    WeatherPrediction 2018
+</footer>
+
+
+</html>
