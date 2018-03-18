@@ -18,24 +18,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
 
-//        Station synop = Synop_Processing.getTemperatures("Gdańsk", "2018-02-25_20-30-00", 1);
-//        System.out.println(synop.toString());
-//        Station wrf = WRF_Processing.getTemperatures("Gdańsk", "2018-02-25_20-30-00", 1);
-//        System.out.println(wrf.toString());
-//
-//        double []diff = new double[24];
-//        for(int i = 0; i < 24; i++) {
-//            diff[i] = Math.abs(wrf.getTemperatures(i) - synop.getTemperatures(i));
-//        }
-//        System.out.println(Arrays.toString(diff));
-//        GenerateJSON.generateJSON(wrf.getTemp(), synop.getTemp());
-
-        //For case when we analyze 1 hour back so we got 1 temperature
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH");
-        Date date = new Date();
-        //System.out.println(dateFormat.format(date)); //2018-02_25-14-49
-        //String dateTemporary = "2018-03-09_09";  //For tests
-
         MapCreator map = new MapCreator();
         WRFComponent wrfComponent = new WRFComponent();
         SynopComponent synopComponent = new SynopComponent();

@@ -1,8 +1,0 @@
-pl\weather\downloader\Implementation\SYNOPFactory$SYNOPSources.class
-pl\weather\downloader\Implementation\WRFFactory$WRFSources.class
-pl\weather\downloader\App\Main.class
-pl\weather\downloader\Implementation\SYNOPFactory.class
-pl\weather\downloader\Api\ISources.class
-pl\weather\downloader\Implementation\WRFFactory.class
-weather\presentation\ShowDatas.class
-pl\weather\downloader\Api\Factory.class

@@ -212,6 +212,8 @@ public class MapCreator implements IMapCreator {
         //Save as new image
         String folderForMaps = pathResources + pathVisualization + "Maps/";
         new File(folderForMaps).mkdirs();
+
         ImageIO.write(combined, "PNG", new File(folderForMaps + date + ".png"));
+        ImageIO.write(combined, "PNG", new File("C:\\Users\\ASUS\\Desktop\\WeatherPredictionProject\\webvisualizer\\src\\main\\resources\\static\\images\\picture.png"));
     }
 }
