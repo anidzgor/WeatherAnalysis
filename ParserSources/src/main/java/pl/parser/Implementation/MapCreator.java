@@ -171,7 +171,6 @@ public class MapCreator implements IMapCreator {
 
                 Color newColor = new Color(r, g, b);
 
-                //System.out.println(y + " " + x);
                 colors[heightImage - 1 - 3 * y][2 * x] = newColor;
                 colors[heightImage - 1 - 3 * y][2 * x + 1] = newColor;
                 colors[heightImage - 2 - 3 * y][2 * x] = newColor;

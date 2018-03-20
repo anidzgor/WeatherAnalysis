@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.math3.util.Precision;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -45,7 +46,11 @@ public class SynopComponent implements IComponent {
                 Node cElement = eElement.getChildNodes().item(1);
                 if (station.getNameStation().equals(cElement.getTextContent())) {
                     //int hourOfMeasure = Integer.parseInt(eElement.getChildNodes().item(3).getTextContent());
-                    station.setTemperature(Float.parseFloat(eElement.getChildNodes().item(4).getTextContent()));
+                    double temp = Float.parseFloat(eElement.getChildNodes().item(4).getTextContent());
+                    temp = Precision.round(temp, 2);
+                    station.setTemperature(temp);
+
+                    break;
                 }
             }
         } catch (SAXException e1) {

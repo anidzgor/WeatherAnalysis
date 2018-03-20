@@ -1,6 +1,7 @@
 package pl.parser.Implementation;
 
 import com.opencsv.CSVReader;
+import org.apache.commons.math3.util.Precision;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -24,7 +25,7 @@ public class WRFComponent implements IComponent {
         File file = new File("src/main/resources/places.xml");
 
         double startCoordLatitude = 48.8;
-        double startCoordLongiture = 13.2;
+        double startCoordLongiture = 13.24;
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -58,6 +59,7 @@ public class WRFComponent implements IComponent {
         String result = csvBody.get(row+1)[col+1];
 
         double celsius = Float.parseFloat(result) - 273.15;
+        celsius = Precision.round(celsius, 2);
         reader.close();
 
         return new Float(celsius);
