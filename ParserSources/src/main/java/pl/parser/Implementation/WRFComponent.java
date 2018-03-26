@@ -19,6 +19,11 @@ import java.util.List;
 
 public class WRFComponent implements IComponent {
     public static String pathSources = "C:/KSG/WRF/";
+    private String sourceFileWRF;
+
+    public String getSourceFileWRF() {
+        return sourceFileWRF;
+    }
 
     private int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
 
@@ -56,7 +61,7 @@ public class WRFComponent implements IComponent {
         File file = new File(filePath);
         CSVReader reader = new CSVReader(new FileReader(file));
         List<String[]> csvBody = reader.readAll();
-        String result = csvBody.get(row+1)[col+1];
+        String result = csvBody.get(row-1)[col-1];
 
         double celsius = Float.parseFloat(result) - 273.15;
         celsius = Precision.round(celsius, 2);
@@ -105,13 +110,13 @@ public class WRFComponent implements IComponent {
 
         //Set hour and choose properly file
         File file = new File(pathSources + newestFolder + "/" + Integer.parseInt(dateMeasure.substring(11, 13)));
+        sourceFileWRF = file.getAbsolutePath();
 
         try {
             station.setTemperature(readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return station;
     }
 }

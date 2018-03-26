@@ -5,6 +5,7 @@ public class Station {
     private String dateOfObservation;
     private double temperature;
     private int[] coordinatesCSV;
+    private String sourceFile;
 
     public Station(String nameStation, String dateOfObservation) {
         this.nameStation = nameStation;

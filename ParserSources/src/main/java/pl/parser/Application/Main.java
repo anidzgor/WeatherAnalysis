@@ -25,7 +25,7 @@ public class Main {
         String[] cities = map.getStationFromXML("src/main/resources/places.xml");
         List<PointMap> points = new ArrayList<>();
 
-        String table[] = {"2018-03-09_00", "2018-03-09_01", "2018-03-09_02", "2018-03-09_03",
+        String table[] = {"2018-03-09_01", "2018-03-09_01", "2018-03-09_02", "2018-03-09_03",
                 "2018-03-09_04", "2018-03-09_05", "2018-03-09_06", "2018-03-09_07",
                 "2018-03-09_08", "2018-03-09_09", "2018-03-09_10", "2018-03-09_11",
                 "2018-03-09_12", "2018-03-09_13", "2018-03-09_14", "2018-03-09_15",
@@ -36,18 +36,24 @@ public class Main {
                 "2018-03-10_13", "2018-03-10_14", "2018-03-10_15", "2018-03-10_16", "2018-03-10_17",
                 "2018-03-10_18", "2018-03-10_19", "2018-03-10_20", "2018-03-10_21", "2018-03-10_22"};
 
-        for(int i = 0; i < table.length; i++) {
+        for(int i = 0; i < 1; i++) {
             String dateTemporary = table[i];
+            List<Station> stations = new ArrayList<>();
 
             //1 measure
             for(String nameStation : cities) {
                 Station wrf = wrfComponent.getTemperatures(nameStation, dateTemporary);
                 Station synop = synopComponent.getTemperatures(nameStation, dateTemporary);
-                PointMap p = new PointMap(Math.abs(wrf.getTemperature() - synop.getTemperature()), wrf.getCoordinatesCSV());
+                //System.out.println("City: " + nameStation + " - WRF: " + wrf.getTemperature() + ", SYNOP: " + synop.getTemperature());
+                PointMap p = new PointMap(wrf.getTemperature() - synop.getTemperature(), wrf.getCoordinatesCSV());
                 points.add(p);
+
+                stations.add(wrf);
             }
             map.createCSV("Excel/" + dateTemporary + ".csv", points);
-            map.createMapImage(dateTemporary);
+            //map.createMapImage(dateTemporary);
+            map.predict(wrfComponent.getSourceFileWRF());
+            map.comparePredictedTemperatures(stations, "2018-03-09_21", wrfComponent, synopComponent);
         }
     }
 }
