@@ -22,7 +22,7 @@ public class Main {
         WRFComponent wrfComponent = new WRFComponent();
         SynopComponent synopComponent = new SynopComponent();
 
-        String[] cities = map.getStationFromXML("src/main/resources/places.xml");
+        String[] cities = map.getStationFromXML();
         List<PointMap> points = new ArrayList<>();
 
         String table[] = {"2018-03-09_01", "2018-03-09_01", "2018-03-09_02", "2018-03-09_03",
@@ -42,18 +42,17 @@ public class Main {
 
             //1 measure
             for(String nameStation : cities) {
-                Station wrf = wrfComponent.getTemperatures(nameStation, dateTemporary);
-                Station synop = synopComponent.getTemperatures(nameStation, dateTemporary);
+                Station wrf = wrfComponent.getTemperature(nameStation, dateTemporary);
+                Station synop = synopComponent.getTemperature(nameStation, dateTemporary);
                 //System.out.println("City: " + nameStation + " - WRF: " + wrf.getTemperature() + ", SYNOP: " + synop.getTemperature());
                 PointMap p = new PointMap(wrf.getTemperature() - synop.getTemperature(), wrf.getCoordinatesCSV());
                 points.add(p);
-
                 stations.add(wrf);
             }
-            map.createCSV("Excel/" + dateTemporary + ".csv", points);
-            //map.createMapImage(dateTemporary);
+            map.createCSVWithInterpolation("Excel/" + dateTemporary + ".csv", points);
+            map.createMapImage(dateTemporary);
             map.predict(wrfComponent.getSourceFileWRF());
-            map.comparePredictedTemperatures(stations, "2018-03-09_21", wrfComponent, synopComponent);
+            //map.comparePredictedTemperatures(stations, dateTemporary, wrfComponent, synopComponent);
         }
     }
 }

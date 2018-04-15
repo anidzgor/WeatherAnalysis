@@ -39,17 +39,17 @@ public class Utils {
         WRFComponent wrfComponent = new WRFComponent();
         SynopComponent synopComponent = new SynopComponent();
 
-        String[] cities = map.getStationFromXML("src/main/resources/places.xml");
+        String[] cities = map.getStationFromXML();
         List<PointMap> points = new ArrayList<>();
 
             //1 measure
             for(String nameStation : cities) {
-                Station wrf = wrfComponent.getTemperatures(nameStation, date);
-                Station synop = synopComponent.getTemperatures(nameStation, date);
+                Station wrf = wrfComponent.getTemperature(nameStation, date);
+                Station synop = synopComponent.getTemperature(nameStation, date);
                 PointMap p = new PointMap(Math.abs(wrf.getTemperature() - synop.getTemperature()), wrf.getCoordinatesCSV());
                 points.add(p);
             }
-            map.createCSV("Excel/" + date + ".csv", points);
+            map.createCSVWithInterpolation("Excel/" + date + ".csv", points);
             map.createMapImage(date);
     }
 
@@ -65,8 +65,8 @@ public class Utils {
         int counter = 0;
 
         for(String date: datas) {
-            Station wrf = wrfComponent.getTemperatures(station, date);
-            Station synop = synopComponent.getTemperatures(station, date);
+            Station wrf = wrfComponent.getTemperature(station, date);
+            Station synop = synopComponent.getTemperature(station, date);
 
             wrfTemp[counter] = wrf.getTemperature();
             synopTemp[counter++] = synop.getTemperature();

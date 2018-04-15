@@ -12,7 +12,7 @@ public class GenerateChart {
         JsonObjectBuilder json = Json.createObjectBuilder();
 
         json.add("chart", Json.createObjectBuilder()
-                .add("caption", "Weather Prediction")
+                .add("caption", "Weather ObservationalData")
                 .add("subCaption", "WRF & SYNOP")
                 .add("captionFontSize", "14")
                 .add("subcaptionFontSize", "14")

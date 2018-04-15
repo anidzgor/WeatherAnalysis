@@ -3,6 +3,7 @@ package pl.parser.Implementation;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import org.apache.commons.math3.util.Precision;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,6 +23,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 
 public class MapCreator implements IMapCreator {
     public static double[][] array;
@@ -29,7 +32,9 @@ public class MapCreator implements IMapCreator {
     public static String pathResources = "C:/KSG/Resources/";
     public static String pathVisualization = "Visualization/";
 
-    public String[] getStationFromXML(String path) throws ParserConfigurationException, IOException, SAXException {
+    public String[] getStationFromXML() throws ParserConfigurationException, IOException, SAXException {
+        String path = "C:/KSG/Resources/places.xml";
+
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(path);
@@ -49,8 +54,6 @@ public class MapCreator implements IMapCreator {
     }
 
     public void predict(String sourceFileWRF) throws IOException {
-
-        //Handle file WRF for prediction - do correct
         String fileWRF = "";
         int hour = 0;
 
@@ -117,7 +120,7 @@ public class MapCreator implements IMapCreator {
             double celsiusPredicted = wrf.readCellFromCSV(pathResources + "\\Excel\\predict.csv", station.getCoordinatesCSV()[0],
                     station.getCoordinatesCSV()[1]);
 
-            double celsiusSYNOP = (synop.getTemperatures(station.getNameStation(), date)).getTemperature();
+            double celsiusSYNOP = (synop.getTemperature(station.getNameStation(), date)).getTemperature();
 
             System.out.println("Station: " + station.getNameStation() + " WRF[" + station.getCoordinatesCSV()[0]
                     + ", " + station.getCoordinatesCSV()[1] + "]: " + celsiusPredicted + " - SYNOP: " + celsiusSYNOP);
@@ -125,7 +128,7 @@ public class MapCreator implements IMapCreator {
         reader.close();
     }
 
-    public void createCSV(String filePath, List<PointMap> points) throws IOException {
+    public void createCSVWithInterpolation(String filePath, List<PointMap> points) throws IOException {
 
         CSVWriter writer = new CSVWriter(new FileWriter(pathResources + filePath));
         List<String[]> entries = new ArrayList<>();
@@ -134,14 +137,11 @@ public class MapCreator implements IMapCreator {
             array[i] = new double[325];
             Arrays.fill(array[i], 0.0);
         }
-        //We have build array double about dimensions 170x325
 
         //Points contain value between wrf and synop, and keep coordinations of cities which we save in csv
         //Points are base to calcuate interpolation in points which we don't have information about measures
         for(PointMap p: points) {
             array[p.getCoordinates(0)][p.getCoordinates(1)] = Precision.round(p.getValuePoint(), 2);
-            //System.out.println(p.getValuePoint());
-            //System.out.println("Y: " + p.getCoordinates(0) + "X: " + p.getCoordinates(1));
         }
 
         int radius = 100;
@@ -204,7 +204,12 @@ public class MapCreator implements IMapCreator {
     }
 
     public void createMapImage(String date) throws IOException {
-        BufferedImage image = new BufferedImage(650, 510, BufferedImage.TYPE_INT_RGB);
+        BufferedImage image = new BufferedImage(650, 610, BufferedImage.TYPE_INT_RGB);
+
+        //Fill background white color
+        Graphics2D graphics = image.createGraphics();
+        graphics.setPaint ( new Color (255,255,255) );
+        graphics.fillRect ( 0, 0, image.getWidth(), image.getHeight() );
 
         Color[][]colors = new Color[510][650];
 
@@ -214,43 +219,68 @@ public class MapCreator implements IMapCreator {
         int widthImage = 650;
         int heightImage = 510;
 
-        int r,g,b;
+        int r = 0, g = 0, b = 0;
+
+        DoubleStream streamMax = Arrays.stream(array).flatMapToDouble(x -> Arrays.stream(x));
+        double max = streamMax.max().getAsDouble();
+        DoubleStream streamMin = Arrays.stream(array).flatMapToDouble(x -> Arrays.stream(x));
+        double min = streamMin.min().getAsDouble();
+
+        //12 types of color
+        double amountTypes = (max - min) / 12.0;
 
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++) {
-                if(array[y][x] == 0.0) {    //white
-                    r = g = b = 255;
-                } else if(array[y][x] > -3.0 && array[y][x] <= -2.0) { //yellow light
-                    r = 249;
-                    g = 248;
-                    b = 207;
+                if(array[y][x] >= min && array[y][x] < (min + amountTypes)) {
+                    r = 160;
+                    g = 0;
+                    b = 200;
                 }
-                else if(array[y][x] > -2.0 && array[y][x] <= -1.0) { //yellow light
-                    r = 241;
-                    g = 244;
-                    b = 183;
-                } else if(array[y][x] > -1.0 && array[y][x] <= 0.0) { //yellow
-                    r = 235;
-                    g = 242;
-                    b = 104;
-                } else if(array[y][x] > 0.0 && array[y][x] <= 1.0) { //orange light
-                    r = 239;
-                    g = 174;
-                    b = 83;
-                } else if(array[y][x] > 1.0 && array[y][x] <= 2.0) {  //orange
-                    r = 242;
-                    g = 152;
-                    b = 26;
-                } else if(array[y][x] > 2.0 && array[y][x] <= 3.0) {    //red light
-                    r = 198;
-                    g = 61;
-                    b = 1;
-                } else if(array[y][x] > 3.0 ) {
-                    r = 66;
-                    g = 22;
-                    b = 2;
-                } else
-                    r = g = b = 0;
+                else if(array[y][x] >= (min + amountTypes) && array[y][x] < (min + amountTypes * 2)) {
+                    r = 130;
+                    g = 0;
+                    b = 220;
+                } else if(array[y][x] >= (min + amountTypes * 2) && array[y][x] < (min + amountTypes * 3)) {
+                    r = 30;
+                    g = 60;
+                    b = 255;
+                } else if(array[y][x] >= (min + amountTypes * 3) && array[y][x] < (min + amountTypes * 4)) {
+                    r = 0;
+                    g = 160;
+                    b = 255;
+                } else if(array[y][x] >= (min + amountTypes * 4) && array[y][x] < (min + amountTypes * 5)) {
+                    r = 0;
+                    g = 200;
+                    b = 200;
+                } else if(array[y][x] >= (min + amountTypes * 5) && array[y][x] < (min + amountTypes * 6)) {
+                    r = 0;
+                    g = 210;
+                    b = 140;
+                } else if(array[y][x] >= (min + amountTypes * 6) && array[y][x] < (min + amountTypes * 7)) {
+                    r = 160;
+                    g = 230;
+                    b = 50;
+                } else if(array[y][x] >= (min + amountTypes * 7) && array[y][x] < (min + amountTypes * 8)) {
+                    r = 230;
+                    g = 220;
+                    b = 50;
+                } else if(array[y][x] >= (min + amountTypes * 8) && array[y][x] < (min + amountTypes * 9)) {
+                    r = 230;
+                    g = 175;
+                    b = 45;
+                } else if(array[y][x] >= (min + amountTypes * 9) && array[y][x] < (min + amountTypes * 10)) {
+                    r = 240;
+                    g = 130;
+                    b = 40;
+                } else if(array[y][x] >= (min + amountTypes * 10) && array[y][x] < (min + amountTypes * 11)) {
+                    r = 250;
+                    g = 60;
+                    b = 60;
+                } else if(array[y][x] >= (min + amountTypes * 11) && array[y][x] < (min + amountTypes * 12)) {
+                    r = 240;
+                    g = 0;
+                    b = 130;
+                }
 
                 Color newColor = new Color(r, g, b);
 
@@ -280,8 +310,9 @@ public class MapCreator implements IMapCreator {
         // load source images
         BufferedImage image = ImageIO.read(new File(folder + date + ".jpg"));
         BufferedImage overlay = ImageIO.read(new File(pathResources + pathVisualization + "layer.png"));
+        BufferedImage gauge = ImageIO.read(new File(pathResources + pathVisualization + "gauge.png"));
 
-        // create the new image, canvas size is the max. of both image sizes
+        // create the new image, canvas size is the max of both image sizes
         int w = Math.max(image.getWidth(), overlay.getWidth());
         int h = Math.max(image.getHeight(), overlay.getHeight());
         BufferedImage combined = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
@@ -290,6 +321,10 @@ public class MapCreator implements IMapCreator {
         Graphics g = combined.getGraphics();
         g.drawImage(image, 0, 0, null);
         g.drawImage(overlay, 0, 0, null);
+        g.drawImage(gauge, 0, h - 90, null);
+
+        g.setColor(Color.BLACK);
+        g.drawString("asdas", 0, h - 50);
 
         //Save as new image
         String folderForMaps = pathResources + pathVisualization + "Maps/";

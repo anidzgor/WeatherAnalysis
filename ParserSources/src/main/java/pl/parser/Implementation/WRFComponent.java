@@ -25,9 +25,9 @@ public class WRFComponent implements IComponent {
         return sourceFileWRF;
     }
 
-    private int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
+    public int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
 
-        File file = new File("src/main/resources/places.xml");
+        File file = new File("C:/KSG/Resources/places.xml");
 
         double startCoordLatitude = 48.8;
         double startCoordLongiture = 13.24;
@@ -70,7 +70,7 @@ public class WRFComponent implements IComponent {
         return new Float(celsius);
     }
 
-    public Station getTemperatures(String nameStation, String dateMeasure) {
+    public Station getTemperature(String nameStation, String dateMeasure) {
         Station station = new Station(nameStation, dateMeasure);
         int[] coordinates = new int[0];
         try {
@@ -95,6 +95,8 @@ public class WRFComponent implements IComponent {
         for(File file: files) {
             newestFolder = file.getName();
         }
+
+        station.setSourceFile(pathSources + newestFolder);
 
         //Set month
         if(parseDate.substring(2, 4).startsWith("0"))
