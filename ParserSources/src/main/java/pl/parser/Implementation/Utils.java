@@ -50,7 +50,7 @@ public class Utils {
                 points.add(p);
             }
             map.createCSVWithInterpolation("Excel/" + date + ".csv", points);
-            map.createMapImage(date);
+            //map.createMapImage(date);
     }
 
     public static JsonObject generateChartJSON(String station, int hours) {

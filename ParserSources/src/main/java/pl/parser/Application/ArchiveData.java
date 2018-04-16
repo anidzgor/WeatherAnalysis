@@ -159,23 +159,17 @@ public class ArchiveData {
         StreamResult result = new StreamResult(new File(pathFolder + "\\" + date + ".xml"));
         transformer.transform(source, result);
 
-        System.out.println("True: " + counterTrue);
-        System.out.println("False: " + counterFalse);
-
-        System.out.println("Percentage of correction: " + (counterTrue / (double)(counterTrue + counterFalse)) * 100 + "%");
+        System.out.println("True: " + counterTrue + ", False: " + counterFalse + ", Percentage of correction: " +
+                (counterTrue / (double)(counterTrue + counterFalse)) * 100 + "%");
 
         for(int i = 0; i < amountOfTemperatures; i++) {
-
             List<PointMap> points = new ArrayList<>();
             for(String city: cities) {
                 PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
                 points.add(p);
             }
-            map.createCSVWithInterpolation("Excel/" + date + ".csv", points);
-            map.createMapImage(date);
-            map.predict(wrfComponent.getSourceFileWRF());
+            map.createCSVWithInterpolation("Excel/" + date.substring(0, 11) + (start + i) + ".csv", points);
+            map.createMapImage(date.substring(0, 11) + (start + i), 'a');
         }
-
-
     }
 }

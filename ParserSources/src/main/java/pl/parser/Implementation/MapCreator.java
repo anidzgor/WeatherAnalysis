@@ -53,59 +53,6 @@ public class MapCreator implements IMapCreator {
         return cities;
     }
 
-    public void predict(String sourceFileWRF) throws IOException {
-        String fileWRF = "";
-        int hour = 0;
-
-        if(sourceFileWRF.charAt(sourceFileWRF.length() - 2) == '\\') {
-            hour = Integer.parseInt(sourceFileWRF.substring(sourceFileWRF.length() - 1)) + 2;
-            fileWRF = sourceFileWRF.substring(0, sourceFileWRF.length() - 1) + hour;
-        } else if(sourceFileWRF.charAt(sourceFileWRF.length() - 3) == '\\') {
-            hour = Integer.parseInt(sourceFileWRF.substring(sourceFileWRF.length() - 2)) + 2;
-            fileWRF = sourceFileWRF.substring(0, sourceFileWRF.length() - 2) + hour;
-        }
-
-        //Add error correct(table array) to new file WRF
-        File file = new File(fileWRF + "\\SHELTER_TEMPERATURE.csv");
-        CSVReader reader = new CSVReader(new FileReader(file));
-        List<String[]> csvBody = reader.readAll();
-
-        for(int i = 0; i < 170; i++) {
-            for(int j = 0; j < 325; j++) {
-                String result = csvBody.get(i)[j];
-
-                if(Float.parseFloat(result) == 0.0 || Float.parseFloat(result) == 0) {
-                    array[i][j] = Float.parseFloat(result);
-                    continue;
-                }
-
-                if(array[i][j] > 0.0)
-                    array[i][j] = Float.parseFloat(result) - array[i][j];
-                else if(array[i][j] < 0.0) {
-                    array[i][j] = Float.parseFloat(result) + array[i][j] * (-1);
-                } else
-                    array[i][j] = Float.parseFloat(result);
-
-                array[i][j] = Precision.round(array[i][j], 2);
-            }
-        }
-
-        reader.close();
-
-        CSVWriter writer = new CSVWriter(new FileWriter(pathResources + "\\Excel\\predict.csv"));
-        List<String[]> entries = new ArrayList<>();
-        //Parse big double array to String
-        for(int i = 0; i < 170; i++) {
-            String s = Arrays.toString(array[i]);
-            s = s.substring(1, s.length() - 1);
-            String[] s_array = s.split(", ");
-            entries.add(s_array);
-        }
-
-        writer.writeAll(entries);
-        writer.close();
-    }
-
     public void comparePredictedTemperatures(List<Station> stations,
                                              String date,
                                              WRFComponent wrf,
@@ -191,9 +138,20 @@ public class MapCreator implements IMapCreator {
             }
         }
 
+        double[][] arrayForFile = new double[170][];
+        for(int i = 0; i < 170; i++) {
+            arrayForFile[i] = new double[325];
+            Arrays.fill(arrayForFile[i], 0.0);
+        }
+
+        for(int i = 0; i < 170; i++)
+            for(int j = 0; j < 325; j++)
+                if(array[i][j] != 0.0)
+                    arrayForFile[i][j] = Precision.round(array[i][j] + 273.15, 2);
+
         //Parse big double array to String
         for(int i = 0; i < 170; i++) {
-            String s = Arrays.toString(array[i]);
+            String s = Arrays.toString(arrayForFile[i]);
             s = s.substring(1, s.length() - 1);
             String[] s_array = s.split(", ");
             entries.add(s_array);
@@ -203,8 +161,8 @@ public class MapCreator implements IMapCreator {
         writer.close();
     }
 
-    public void createMapImage(String date) throws IOException {
-        BufferedImage image = new BufferedImage(650, 610, BufferedImage.TYPE_INT_RGB);
+    public void createMapImage(String date, char typeOfImage) throws IOException {
+        BufferedImage image = new BufferedImage(650, 580, BufferedImage.TYPE_INT_RGB);
 
         //Fill background white color
         Graphics2D graphics = image.createGraphics();
@@ -303,10 +261,10 @@ public class MapCreator implements IMapCreator {
         new File(folderForLayers).mkdirs();
         ImageIO.write(image, "JPG", new File(folderForLayers + date + ".jpg"));
 
-        overlay(date, folderForLayers);
+        overlay(date, folderForLayers, max, min, typeOfImage);
     }
 
-    public void overlay(String date, String folder) throws IOException {
+    public void overlay(String date, String folder, double max, double min, char typeOfImage) throws IOException {
         // load source images
         BufferedImage image = ImageIO.read(new File(folder + date + ".jpg"));
         BufferedImage overlay = ImageIO.read(new File(pathResources + pathVisualization + "layer.png"));
@@ -321,16 +279,24 @@ public class MapCreator implements IMapCreator {
         Graphics g = combined.getGraphics();
         g.drawImage(image, 0, 0, null);
         g.drawImage(overlay, 0, 0, null);
-        g.drawImage(gauge, 0, h - 90, null);
+        g.drawImage(gauge, 50, h - 60, null);
 
         g.setColor(Color.BLACK);
-        g.drawString("asdas", 0, h - 50);
+        double counter = (max - min) / 12.0;
+        for(int i = 1; i <= 12; i++) {
+            double value = Precision.round(min + counter * (i - 1), 2);
+            g.drawString(String.valueOf(value), i * 45, h - 20);
+        }
 
         //Save as new image
         String folderForMaps = pathResources + pathVisualization + "Maps/";
         new File(folderForMaps).mkdirs();
+        new File(folderForMaps + "/Observational/").mkdirs();
+        new File(folderForMaps + "/Archive/").mkdirs();
 
-        ImageIO.write(combined, "PNG", new File(folderForMaps + date + ".png"));
-        //ImageIO.write(combined, "PNG", new File("C:\\Users\\ASUS\\Desktop\\WeatherPredictionProject\\webvisualizer\\src\\main\\resources\\static\\images\\picture.png"));
+        if(typeOfImage == 'o')
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Observational/" + date + ".png"));
+        else
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/" + date + ".png"));
     }
 }

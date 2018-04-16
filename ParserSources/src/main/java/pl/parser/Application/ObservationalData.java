@@ -5,6 +5,7 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
+import pl.parser.Domain.PointMap;
 import pl.parser.Domain.Station;
 import pl.parser.Implementation.MapCreator;
 import pl.parser.Implementation.SynopComponent;
@@ -47,11 +48,14 @@ public class ObservationalData {
         int start = Integer.parseInt(hour);
         int end = start + 5;
 
-        double wrfTable[] = new double[6];
-        double synopTable[] = new double[6];
-        double predicted[] = new double[6];
+        int amountOfTemperatures = 6;
+        double wrfTable[] = new double[amountOfTemperatures];
+        double synopTable[] = new double[amountOfTemperatures];
+        double predicted[] = new double[amountOfTemperatures];
 
         double diff = 0.0;
+
+        Map<String, double[]> citiesWithPredictedTemperatures = new HashMap<>();
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -86,6 +90,8 @@ public class ObservationalData {
 
                 diff = diff * 0.7;
             }
+
+            citiesWithPredictedTemperatures.put(nameStation, Arrays.copyOf(predicted, predicted.length));
 
             //City
             Element city = doc.createElement("City");
@@ -130,5 +136,16 @@ public class ObservationalData {
 
         StreamResult result = new StreamResult(new File(pathFolder + "\\" + date + ".xml"));
         transformer.transform(source, result);
+
+        for(int i = 0; i < amountOfTemperatures; i++) {
+
+            List<PointMap> points = new ArrayList<>();
+            for(String city: cities) {
+                PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
+                points.add(p);
+            }
+            map.createCSVWithInterpolation("Excel/" + date.substring(0, 11) + (start + i) + ".csv", points);
+            map.createMapImage(date.substring(0, 11) + (start + i), 'o');
+        }
     }
 }
