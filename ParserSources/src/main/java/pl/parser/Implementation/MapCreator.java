@@ -53,28 +53,6 @@ public class MapCreator implements IMapCreator {
         return cities;
     }
 
-    public void comparePredictedTemperatures(List<Station> stations,
-                                             String date,
-                                             WRFComponent wrf,
-                                             SynopComponent synop) throws IOException {
-
-        CSVReader reader = new CSVReader(new FileReader(pathResources + "\\Excel\\predict.csv"));
-        List<String[]> csvBody = reader.readAll();
-
-        for(Station station: stations) {
-
-            //WRF prediction temperature
-            double celsiusPredicted = wrf.readCellFromCSV(pathResources + "\\Excel\\predict.csv", station.getCoordinatesCSV()[0],
-                    station.getCoordinatesCSV()[1]);
-
-            double celsiusSYNOP = (synop.getTemperature(station.getNameStation(), date)).getTemperature();
-
-            System.out.println("Station: " + station.getNameStation() + " WRF[" + station.getCoordinatesCSV()[0]
-                    + ", " + station.getCoordinatesCSV()[1] + "]: " + celsiusPredicted + " - SYNOP: " + celsiusSYNOP);
-        }
-        reader.close();
-    }
-
     public void createCSVWithInterpolation(String filePath, List<PointMap> points) throws IOException {
 
         CSVWriter writer = new CSVWriter(new FileWriter(pathResources + filePath));
@@ -147,6 +125,14 @@ public class MapCreator implements IMapCreator {
         for(int i = 0; i < 170; i++)
             for(int j = 0; j < 325; j++)
                 if(array[i][j] != 0.0)
+                    arrayForFile[i][j] = Precision.round(array[i][j] + 273.15, 2);
+
+        //For fill cell where is 0.0 in some cell between points
+        for(int i = 0; i < 170; i++)
+            for(int j = 0; j < 325; j++)
+                if(     (i > 1 && j > 1 && i < 169 & j < 323 && array[i][j] == 0.0 && array[i-1][j] != 0.0 && array[i+1][j] != 0.0) ||
+                        (i > 1 && j > 1 && i < 169 & j < 323 && array[i][j] == 0.0 && array[i][j-1] != 0.0 && array[i][j+1] != 0.0) ||
+                        (array[i][j] == 0.0 && i > 31 && j > 16 && i < 160 && j < 270))
                     arrayForFile[i][j] = Precision.round(array[i][j] + 273.15, 2);
 
         //Parse big double array to String
@@ -293,10 +279,13 @@ public class MapCreator implements IMapCreator {
         new File(folderForMaps).mkdirs();
         new File(folderForMaps + "/Observational/").mkdirs();
         new File(folderForMaps + "/Archive/").mkdirs();
+        new File(folderForMaps + "/LeavePOutCrossValidation/").mkdirs();
 
         if(typeOfImage == 'o')
             ImageIO.write(combined, "PNG", new File(folderForMaps + "/Observational/" + date + ".png"));
-        else
+        else if(typeOfImage == 'a')
             ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/" + date + ".png"));
+        else if(typeOfImage == 'p')
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/LeavePOutCrossValidation/" + date + ".png"));
     }
 }
