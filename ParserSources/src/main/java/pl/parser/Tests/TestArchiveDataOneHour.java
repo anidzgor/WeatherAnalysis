@@ -25,15 +25,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 public class TestArchiveDataOneHour {
-    private static int amountTestingSet = 20;
-    private static int amountTrainingSet = 40;
+    private static int amountTestingSet = 10;
+    private static int amountTrainingSet = 50;
     private static String date = "2018-03-09_07";
     public static String pathSources = "C:/KSG/Resources/";
-    private static int maxIteration = 10;    //max iteration
+    private static int maxIteration = 50;    //max iteration
     private static String pathCrossValidation = "C:\\KSG\\Resources\\Tests\\ArchiveData\\";
 
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException, TransformerException {
@@ -44,6 +43,8 @@ public class TestArchiveDataOneHour {
         WRFComponent wrfComponent = new WRFComponent();
 
         boolean flagNoFileSYNOP = false;
+        double globalPercentageCorrection = 0.0;
+        int amountCheckedFile = 0;
 
         File folder = new File("C:\\KSG\\SYNOP\\");
         File[] listOfFiles = folder.listFiles();
@@ -53,12 +54,10 @@ public class TestArchiveDataOneHour {
             dates.add(file.getName().substring(0, 13));
 
         for (String date: dates) {
-            //date = "2018-03-09_22";
-            int start = Integer.parseInt(date.substring(11, 13));
-
             int correct = 0;
 
-            if(start == 0 && start == 23)
+            int start = Integer.parseInt(date.substring(11, 13));
+            if(start == 0 || start == 23)
                 continue;
 
             //Create XML file
@@ -80,8 +79,17 @@ public class TestArchiveDataOneHour {
                 for (int c = 0; c < amountTestingSet; c++) {
                     randomlyCities.add(allCities[randomlyChoosenSetOfCities[c]]);   //It is helpful to extract to sets training and testing
                     Station station = synopComponent.getTemperature(allCities[randomlyChoosenSetOfCities[c]], date);  //Create station based on name from list
+
+                    if(station == null) {
+                        flagNoFileSYNOP = true;
+                        break;
+                    }
                     station.initialiazeCoordinates(wrfComponent.getCoordinates(station.getNameStation()));  //Get coordinates
                     stationsWithUnknownTemperature.add(station);
+                }
+
+                if (flagNoFileSYNOP) {
+                    break;
                 }
 
                 //Training Set
@@ -112,15 +120,15 @@ public class TestArchiveDataOneHour {
                                 Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) + "/" +
                                 (start + 1) + "\\SHELTER_TEMPERATURE.CSV", wrfSource.getCoordinatesCSV()[0], wrfSource.getCoordinatesCSV()[1]);
 
-
                         double tempSYNOPBefore = synopComponent.getTemperature(currentStation, date.substring(0, 10) + "_" + (start - 1)).getTemperature();
                         double diff = tempSYNOPBefore - tempWRFBefore;
                         double mean = (tempWRFBefore + tempWRFPresent + tempWRFAfter) / 3;
                         double temperatureOnStation = mean + diff;
                         station.setTemperature(temperatureOnStation);
                         stationsWithKnowTemperature.add(station);
+
                     } catch (Exception e) {
-                        System.out.println("Not found 1 file before present - SYNOP");
+                        System.out.println("Not founds neccessary files(WRF or SYNOP)");
                         flagNoFileSYNOP = true;
                     }
 
@@ -138,12 +146,56 @@ public class TestArchiveDataOneHour {
                     points.add(p);
                 }
 
-                String filePath = "Excel/TestArchiveDataOneHour/" + date.substring(0, 13) + ".csv";
-                new File(pathSources + "/Excel/TestArchiveDataOneHour//").mkdirs();
-
+                //Map 3 - Model
+                String filePath = "Excel/TestArchiveData/Model/" + date.substring(0, 13) + ".csv";
+                new File(pathSources + "/Excel/TestArchiveData/Model/").mkdirs();
                 mapCreator.createCSVWithInterpolation(filePath, points);
-                mapCreator.createMapImage(date.substring(0, 13), 'p');
+                mapCreator.createMapImage(filePath.substring(27, filePath.length() - 4) + "/", date.substring(0, 13), 'e');
 
+                if(i == (maxIteration - 1)) {
+                    //Map 1 - create Map with clear WRF
+                    List<PointMap> pointsWRF = new ArrayList<>();
+                    for (String cityWRF : mapCreator.getStationFromXML()) {
+                        Station wrfSource = wrfComponent.getTemperature(cityWRF, date);
+                        try {
+                            double tempWRFCity = wrfComponent.readCellFromCSV(wrfSource.getSourceFile() + "/" +
+                                            Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) +
+                                            "/" + start + "\\SHELTER_TEMPERATURE.CSV", wrfSource.getCoordinatesCSV()[0],
+                                    wrfSource.getCoordinatesCSV()[1]);
+                            PointMap p = new PointMap(tempWRFCity, wrfSource.getCoordinatesCSV());
+                            pointsWRF.add(p);
+                        } catch (Exception e) {
+                            System.out.println("Problem with 1st map(WRF)");
+                        }
+                    }
+                    String filePathWRF = "Excel/TestArchiveData/WRF/" + date.substring(0, 13) + ".csv";
+                    new File(pathSources + "/Excel/TestArchiveData/WRF/").mkdirs();
+                    mapCreator.createCSVWithInterpolation(filePathWRF, pointsWRF);
+                    mapCreator.createMapImage(filePathWRF.substring(25, filePathWRF.length() - 4) + "/", date.substring(0, 13), 'c');
+
+                    //Map 2 - IDW
+                    List<PointMap> pointsIDW = new ArrayList<>();
+                    for (String cityIDW : mapCreator.getStationFromXML()) {
+                        Station wrfSource = wrfComponent.getTemperature(cityIDW, date);
+                        try {
+                            double tempWRFCity = wrfComponent.readCellFromCSV(wrfSource.getSourceFile() + "/" +
+                                            Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) +
+                                            "/" + start + "\\SHELTER_TEMPERATURE.CSV", wrfSource.getCoordinatesCSV()[0],
+                                    wrfSource.getCoordinatesCSV()[1]);
+
+                            double tempSYNOP = synopComponent.getTemperature(cityIDW, date.substring(0, 10) + "_" +
+                                    start).getTemperature();
+                            PointMap p = new PointMap(Math.abs(tempWRFCity - tempSYNOP), wrfSource.getCoordinatesCSV());
+                            pointsIDW.add(p);
+                        } catch (Exception e) {
+                            System.out.println("Problem with 2st map(IDW)");
+                        }
+                    }
+                    String filePathIDW = "Excel/TestArchiveData/IDW/" + date.substring(0, 13) + ".csv";
+                    new File(pathSources + "/Excel/TestArchiveData/IDW/").mkdirs();
+                    mapCreator.createCSVWithInterpolation(filePathIDW, pointsIDW);
+                    mapCreator.createMapImage(filePathIDW.substring(25, filePathWRF.length() - 4) + "/", date.substring(0, 13), 'd');
+                }
                 //Write iteration to xml file
                 Element iteration = doc.createElement("Iteration" + i);
                 rootElement.appendChild(iteration);
@@ -214,6 +266,14 @@ public class TestArchiveDataOneHour {
 
             StreamResult result = new StreamResult(new File(pathFolder + "\\" + date + ".xml"));
             transformer.transform(source, result);
+
+            globalPercentageCorrection += ((((double) correct) / maxIteration) * 100);
+            amountCheckedFile++;
+            System.out.println("Correct of file: " + (((double) correct) / maxIteration) * 100);
+            System.out.println("Correction: " + globalPercentageCorrection / amountCheckedFile);
+
+            correct = 0;
         }
+        System.out.println(globalPercentageCorrection / amountCheckedFile);
     }
 }

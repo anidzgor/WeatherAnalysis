@@ -26,6 +26,7 @@ import java.util.*;
 
 public class ArchiveData {
     private static String pathArchiveData = "C:\\KSG\\Resources\\ArchiveData\\";
+    public static String pathSources = "C:/KSG/Resources/";
     private String[] cities;
     private MapCreator map;
 
@@ -91,7 +92,6 @@ public class ArchiveData {
 
                 double mean = (tempWRFBefore + tempWRFPresent + tempWRFAfter) / 3;
                 double result = mean + diff;
-
                 wrfTable[i - start] = tempWRFPresent;
                 synopTable[i - start] = tempSYNOPPresent;
                 predicted[i - start] = result;
@@ -146,6 +146,10 @@ public class ArchiveData {
                 }
             }
         }
+
+        if(endSearch)
+            return;
+
         //write the content into xml file
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
@@ -162,14 +166,52 @@ public class ArchiveData {
         System.out.println("True: " + counterTrue + ", False: " + counterFalse + ", Percentage of correction: " +
                 (counterTrue / (double)(counterTrue + counterFalse)) * 100 + "%");
 
-        for(int i = 0; i < amountOfTemperatures; i++) {
-            List<PointMap> points = new ArrayList<>();
-            for(String city: cities) {
-                PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
-                points.add(p);
+        try {
+            //Model
+            for (int i = 0; i < amountOfTemperatures; i++) {
+                List<PointMap> points = new ArrayList<>();
+                for (String city : cities) {
+                    PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
+                    points.add(p);
+                }
+                String filePath = "Excel/ArchiveData/Model/" + date.substring(0, 11) + start + "/" + date.substring(0, 11) + (start + i) + ".csv";
+                new File(pathSources + "/Excel/ArchiveData/Model/" + date.substring(0, 11) + start + "/").mkdirs();
+                map.createCSVWithInterpolation(filePath, points);
+                map.createMapImage(date.substring(0, 11) + start, date.substring(0, 11) + (start + i), 'a');
             }
-            map.createCSVWithInterpolation("Excel/" + date.substring(0, 11) + (start + i) + ".csv", points);
-            map.createMapImage(date.substring(0, 11) + (start + i), 'a');
+
+            //WRF
+            for (int i = 0; i < amountOfTemperatures; i++) {
+                List<PointMap> points = new ArrayList<>();
+                for (String city : cities) {
+                    Station wrf = wrfComponent.getTemperature(city, date);
+                    double tempWRF = wrfComponent.readCellFromCSV(wrf.getSourceFile() + "/" + Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) + "/" + (start + i) + "\\SHELTER_TEMPERATURE.CSV", wrf.getCoordinatesCSV()[0], wrf.getCoordinatesCSV()[1]);
+                    PointMap p = new PointMap(tempWRF, wrfComponent.getCoordinates(city));
+                    points.add(p);
+                }
+                String filePath = "Excel/ArchiveData/WRF/" + date.substring(0, 11) + start + "/" + date.substring(0, 11) + (start + i) + ".csv";
+                new File(pathSources + "/Excel/ArchiveData/WRF/" + date.substring(0, 11) + start + "/").mkdirs();
+                map.createCSVWithInterpolation(filePath, points);
+                map.createMapImage(date.substring(0, 11) + start, date.substring(0, 11) + (start + i), 'b');
+            }
+
+            //IDW
+            for (int i = 0; i < amountOfTemperatures; i++) {
+                List<PointMap> points = new ArrayList<>();
+                for (String city : cities) {
+                    Station wrf = wrfComponent.getTemperature(city, date);
+                    double tempWRF = wrfComponent.readCellFromCSV(wrf.getSourceFile() + "/" + Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) + "/" + (start + i) + "\\SHELTER_TEMPERATURE.CSV", wrf.getCoordinatesCSV()[0], wrf.getCoordinatesCSV()[1]);
+                    double tempSynop = synopComponent.getTemperature(city, date.substring(0, 10) + "_" + (start + i)).getTemperature();
+                    PointMap p = new PointMap(Math.abs(tempWRF - tempSynop), wrfComponent.getCoordinates(city));
+                    points.add(p);
+                }
+                String filePath = "Excel/ArchiveData/IDW/" + date.substring(0, 11) + start + "/" + date.substring(0, 11) + (start + i) + ".csv";
+                new File(pathSources + "/Excel/ArchiveData/IDW/" + date.substring(0, 11) + start + "/").mkdirs();
+                map.createCSVWithInterpolation(filePath, points);
+                map.createMapImage(date.substring(0, 11) + start, date.substring(0, 11) + (start + i), 'i');
+            }
+        }catch(Exception e) {
+            System.out.println("No found file(Synop or WRF)");
         }
     }
 }

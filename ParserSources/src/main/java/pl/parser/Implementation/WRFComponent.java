@@ -117,7 +117,7 @@ public class WRFComponent implements IComponent {
         try {
             station.setTemperature(readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]));
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("No neccessary files WRF");
         }
         return station;
     }

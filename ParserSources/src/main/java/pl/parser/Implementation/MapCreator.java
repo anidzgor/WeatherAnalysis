@@ -147,7 +147,7 @@ public class MapCreator implements IMapCreator {
         writer.close();
     }
 
-    public void createMapImage(String date, char typeOfImage) throws IOException {
+    public void createMapImage(String folderStart, String date, char typeOfImage) throws IOException {
         BufferedImage image = new BufferedImage(650, 580, BufferedImage.TYPE_INT_RGB);
 
         //Fill background white color
@@ -163,24 +163,39 @@ public class MapCreator implements IMapCreator {
         int widthImage = 650;
         int heightImage = 510;
 
-        int r = 0, g = 0, b = 0;
+        int r, g, b;
 
         DoubleStream streamMax = Arrays.stream(array).flatMapToDouble(x -> Arrays.stream(x));
         double max = streamMax.max().getAsDouble();
         DoubleStream streamMin = Arrays.stream(array).flatMapToDouble(x -> Arrays.stream(x));
         double min = streamMin.min().getAsDouble();
 
+        if(min < 0.0)
+            min = ((int)min / 5 - 1) * 5;
+        else if(min > 0.0)
+            min = ((int)min / 5 + 1) * 5;
+
+        if(max < 0.0)
+            max = ((int)max / 5 - 1) * 5;
+        else if(max > 0.0)
+            max = ((int)max / 5 + 1) * 5;
+
+        if(min == max){
+            min -= 5;
+            max += 5;
+        }
+
         //12 types of color
         double amountTypes = (max - min) / 12.0;
 
         for (int y = 0; y < height; y++)
             for (int x = 0; x < width; x++) {
+            r = g = b = 0;
                 if(array[y][x] >= min && array[y][x] < (min + amountTypes)) {
                     r = 160;
                     g = 0;
                     b = 200;
-                }
-                else if(array[y][x] >= (min + amountTypes) && array[y][x] < (min + amountTypes * 2)) {
+                } else if(array[y][x] >= (min + amountTypes) && array[y][x] < (min + amountTypes * 2)) {
                     r = 130;
                     g = 0;
                     b = 220;
@@ -227,7 +242,6 @@ public class MapCreator implements IMapCreator {
                 }
 
                 Color newColor = new Color(r, g, b);
-
                 colors[heightImage - 1 - 3 * y][2 * x] = newColor;
                 colors[heightImage - 1 - 3 * y][2 * x + 1] = newColor;
                 colors[heightImage - 2 - 3 * y][2 * x] = newColor;
@@ -243,16 +257,6 @@ public class MapCreator implements IMapCreator {
                 image.setRGB(2 * x + 1, heightImage - 3 - 3 * y, newColor.getRGB());
             }
 
-        String folderForLayers = pathResources + pathVisualization + "Layers/";
-        new File(folderForLayers).mkdirs();
-        ImageIO.write(image, "JPG", new File(folderForLayers + date + ".jpg"));
-
-        overlay(date, folderForLayers, max, min, typeOfImage);
-    }
-
-    public void overlay(String date, String folder, double max, double min, char typeOfImage) throws IOException {
-        // load source images
-        BufferedImage image = ImageIO.read(new File(folder + date + ".jpg"));
         BufferedImage overlay = ImageIO.read(new File(pathResources + pathVisualization + "layer.png"));
         BufferedImage gauge = ImageIO.read(new File(pathResources + pathVisualization + "gauge.png"));
 
@@ -262,30 +266,71 @@ public class MapCreator implements IMapCreator {
         BufferedImage combined = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
 
         // paint both images, preserving the alpha channels
-        Graphics g = combined.getGraphics();
-        g.drawImage(image, 0, 0, null);
-        g.drawImage(overlay, 0, 0, null);
-        g.drawImage(gauge, 50, h - 60, null);
+        Graphics gAll = combined.getGraphics();
+        gAll.drawImage(image, 0, 0, null);
+        gAll.drawImage(overlay, 0, 0, null);
+        gAll.drawImage(gauge, 50, h - 60, null);
 
-        g.setColor(Color.BLACK);
+        gAll.setColor(Color.BLACK);
         double counter = (max - min) / 12.0;
-        for(int i = 1; i <= 12; i++) {
+        for(int i = 1; i <= 13; i++) {
             double value = Precision.round(min + counter * (i - 1), 2);
-            g.drawString(String.valueOf(value), i * 45, h - 20);
+            gAll.drawString(String.valueOf(value), i * 45, h - 20);
         }
 
         //Save as new image
         String folderForMaps = pathResources + pathVisualization + "Maps/";
         new File(folderForMaps).mkdirs();
+
         new File(folderForMaps + "/Observational/").mkdirs();
         new File(folderForMaps + "/Archive/").mkdirs();
-        new File(folderForMaps + "/LeavePOutCrossValidation/").mkdirs();
 
-        if(typeOfImage == 'o')
-            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Observational/" + date + ".png"));
-        else if(typeOfImage == 'a')
-            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/" + date + ".png"));
-        else if(typeOfImage == 'p')
-            ImageIO.write(combined, "PNG", new File(folderForMaps + "/LeavePOutCrossValidation/" + date + ".png"));
+        new File(folderForMaps + "/ArchiveTestsLeavePOut/").mkdirs();
+        new File(folderForMaps + "/ObservationalTestsLeavePOut/").mkdirs();
+
+        if(typeOfImage == 'o') {
+            new File(folderForMaps + "/Observational/Model/" + folderStart).mkdirs();         //o
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Observational/Model/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 'p') {
+            new File(folderForMaps + "/Observational/WRF/" + folderStart).mkdirs();             //p
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Observational/WRF/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 'a') {
+            new File(folderForMaps + "/Archive/Model/" + folderStart).mkdirs();         //a
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/Model/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 'b') {
+            new File(folderForMaps + "/Archive/WRF/" + folderStart).mkdirs();         //b
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/WRF/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 'i') {
+            new File(folderForMaps + "/Archive/IDW/" + folderStart).mkdirs();         //i
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/Archive/IDW/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 'c') { //for leave p out archive
+            new File(folderForMaps + "/ArchiveTestsLeavePOut/WRF/").mkdirs();   //c
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ArchiveTestsLeavePOut/WRF/" + date + ".png"));
+        }
+        else if(typeOfImage == 'd') {//for leave p out archive
+            new File(folderForMaps + "/ArchiveTestsLeavePOut/IDW/").mkdirs();  //d
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ArchiveTestsLeavePOut/IDW/" + date + ".png"));
+        }
+        else if(typeOfImage == 'e') { //for leave p out archive
+            new File(folderForMaps + "/ArchiveTestsLeavePOut/Model/").mkdirs(); //e
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ArchiveTestsLeavePOut/Model/" + date + ".png"));
+        }
+        else if(typeOfImage == 'r') {//for leave p out observational
+            new File(folderForMaps + "/ObservationalTestsLeavePOut/WRF/" + folderStart).mkdirs(); //r
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ObservationalTestsLeavePOut/WRF/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 's') {
+            new File(folderForMaps + "/ObservationalTestsLeavePOut/IDW/" + folderStart).mkdirs();//s
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ObservationalTestsLeavePOut/IDW/" + folderStart + "/" + date + ".png"));
+        }
+        else if(typeOfImage == 't') {
+            new File(folderForMaps + "/ObservationalTestsLeavePOut/Model/" + folderStart).mkdirs();   //t
+            ImageIO.write(combined, "PNG", new File(folderForMaps + "/ObservationalTestsLeavePOut/Model/" + folderStart + "/" + date + ".png"));
+        }
     }
 }

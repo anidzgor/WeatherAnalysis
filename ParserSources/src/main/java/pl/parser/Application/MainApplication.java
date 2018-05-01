@@ -13,8 +13,8 @@ public class MainApplication {
         MapCreator mapCreator = new MapCreator();
 
         //Must be parametrized to invoke from command line
-        char choose = 'a';
-        String date = "2018-04-16_10";
+        char choose = 'o';
+        String date = "2018-04-12_10";
 
         if(choose == 'a') {  //Archive data
             ArchiveData archiveData = new ArchiveData(mapCreator);

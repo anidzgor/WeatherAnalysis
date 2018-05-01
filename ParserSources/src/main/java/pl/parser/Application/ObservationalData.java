@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ObservationalData {
+    public static String pathSources = "C:/KSG/Resources/";
     private static String observationalData = "C:\\KSG\\Resources\\ObservationalData";
     private String[] cities;
     private MapCreator map;
@@ -36,7 +37,7 @@ public class ObservationalData {
 
     public void predictFiveHours() throws IOException, SAXException, ParserConfigurationException, TransformerException {
         Calendar calendar = GregorianCalendar.getInstance();
-        calendar.set(2018, 03, 12, 14, 0);  //temporary solution for test, later must be remove
+        calendar.set(2018, 03, 16, 9, 0);  //temporary solution for test, later must be remove
         String date = new SimpleDateFormat("yyyy-MM-dd_HH").format(calendar.getTime());
         String hour = new SimpleDateFormat("HH").format(calendar.getTime());
         String monthWRF = new SimpleDateFormat("M").format(calendar.getTime());
@@ -137,15 +138,35 @@ public class ObservationalData {
         StreamResult result = new StreamResult(new File(pathFolder + "\\" + date + ".xml"));
         transformer.transform(source, result);
 
-        for(int i = 0; i < amountOfTemperatures; i++) {
-
-            List<PointMap> points = new ArrayList<>();
-            for(String city: cities) {
-                PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
-                points.add(p);
+        try {
+            //Model
+            for (int i = 0; i < amountOfTemperatures; i++) {
+                List<PointMap> points = new ArrayList<>();
+                for (String city : cities) {
+                    PointMap p = new PointMap(citiesWithPredictedTemperatures.get(city)[i], wrfComponent.getCoordinates(city));
+                    points.add(p);
+                }
+                String filePath = "Excel/ObservationalData/Model/" + date.substring(0, 11) + start + "/" + date.substring(0, 11) + (start + i) + ".csv";
+                new File(pathSources + "/Excel/ObservationalData/Model/" + date.substring(0, 11) + start + "/").mkdirs();
+                map.createCSVWithInterpolation(filePath, points);
+                map.createMapImage(date.substring(0, 11) + start, date.substring(0, 11) + (start + i), 'o');
             }
-            map.createCSVWithInterpolation("Excel/" + date.substring(0, 11) + (start + i) + ".csv", points);
-            map.createMapImage(date.substring(0, 11) + (start + i), 'o');
+            //WRF
+            for (int i = 0; i < amountOfTemperatures; i++) {
+                List<PointMap> points = new ArrayList<>();
+                for (String city : cities) {
+                    Station wrf = wrfComponent.getTemperature(city, date);
+                    double tempWRF = wrfComponent.readCellFromCSV(wrf.getSourceFile() + "/" + Integer.parseInt(date.substring(5, 7)) + "/" + Integer.parseInt(date.substring(8, 10)) + "/" + (start + i) + "\\SHELTER_TEMPERATURE.CSV", wrf.getCoordinatesCSV()[0], wrf.getCoordinatesCSV()[1]);
+                    PointMap p = new PointMap(tempWRF, wrfComponent.getCoordinates(city));
+                    points.add(p);
+                }
+                String filePath = "Excel/ObservationalData/WRF/" + date.substring(0, 11) + start + "/" + date.substring(0, 11) + (start + i) + ".csv";
+                new File(pathSources + "/Excel/ObservationalData/WRF/" + date.substring(0, 11) + start + "/").mkdirs();
+                map.createCSVWithInterpolation(filePath, points);
+                map.createMapImage(date.substring(0, 11) + start, date.substring(0, 11) + (start + i), 'p');
+            }
+        }catch (Exception e) {
+            System.out.println("No files WRF");
         }
     }
 }
