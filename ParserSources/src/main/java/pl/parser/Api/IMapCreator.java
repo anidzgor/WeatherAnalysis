@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface IMapCreator {
     //Get names station from xml
-    String[] getStationFromXML(String path) throws ParserConfigurationException, IOException, SAXException;
+    String[] getStationFromXML() throws ParserConfigurationException, IOException, SAXException;
 
     //Create csv(170x325) with base points, and fill csv with interpolation between this points
-    void createCSV(String filePath, List<PointMap> points) throws IOException;
+    void createCSVWithInterpolation(String filePath, List<PointMap> points) throws IOException;
 }

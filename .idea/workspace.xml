@@ -2,188 +2,30 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="HelloSpring:war exploded" />
+      <artifact name="ParserSources:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d998cfd-799a-47a8-b53a-33e4f0545e57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_json_javax_json_api_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_1_3_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_1_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_1_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_thymeleaf_thymeleaf_Release.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/HomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/static/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/static/js/fusioncharts.charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/static/js/fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/static/js/fusioncharts.theme.fint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/static/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/charts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/template.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/DownloaderResources-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Api/Factory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Api/ISources.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/App/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/SYNOPFactory$SYNOPSources.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/SYNOPFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/WRFFactory$WRFSources.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/pl/weather/downloader/Implementation/WRFFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/classes/weather/presentation/ShowDatas.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DownloaderResources/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/ParserSources-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Api/IComponent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Api/IMapCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Domain/PointMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Domain/Station.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/MapCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/SynopComponent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/WRFComponent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Visualizer/GenerateJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/pl/spring/HomeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/pl/spring/FusionCharts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/pl/spring/HomeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/places.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/2018-03-09_05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/HelloWeb-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/glowny.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/welcome.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/datas/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/datas/diff.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/js/fusioncharts.charts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/js/fusioncharts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/js/fusioncharts.theme.fint.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_1_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_1_5_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateJSON.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateChart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/classes/pl/spring/FusionCharts.class" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/classes/pl/spring/FusionCharts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/classes/pl/spring/HomeController.class" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/classes/pl/spring/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/LeavePOutCrossValidation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestCompareResults.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Tests/LeavePOutCrossValidation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Tests/TestArchiveDataSixHour.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Tests/TestCompareResults.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataSixHour.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestObservationDataSixHours.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/ArchiveData.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/ArchiveData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/MainApplication.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/MainApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/ObservationalData.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Application/ObservationalData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/MapCreator.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/MapCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/WRFComponent.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Implementation/WRFComponent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Tests/TestArchiveDataOneHour.class" afterPath="$PROJECT_DIR$/ParserSources/target/classes/pl/parser/Tests/TestArchiveDataOneHour.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" afterPath="$PROJECT_DIR$/DownloaderResources/DownloaderResources.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloSpring.iml" afterPath="$PROJECT_DIR$/HelloSpring.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/ParserSources.iml" afterPath="$PROJECT_DIR$/ParserSources/ParserSources.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/pom.xml" afterPath="$PROJECT_DIR$/ParserSources/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ArchiveData.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ArchiveData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainApplication.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ObservationalData.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ObservationalData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/HelloWeb-servlet.xml" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/HelloWeb-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/views/glowny.jsp" afterPath="$PROJECT_DIR$/out/artifacts/HelloSpring_war_exploded/WEB-INF/views/glowny.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataOneHour.java" afterPath="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataOneHour.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -202,49 +44,71 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/WeatherPredictionProject$TestObservationDataSixHours.coverage" NAME="TestObservationDataSixHours Coverage Results" MODIFIED="1524930964075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pl.parser.Tests.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/HelloSpring$SynopXML.coverage" NAME="SynopXML Coverage Results" MODIFIED="1515686823788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>pl.parser.*</FILTER>
     </SUITE>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/HomeController.java">
+      <file leaf-file-name="ArchiveData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ArchiveData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state relative-caret-position="2835">
+              <caret line="157" column="13" lean-forward="false" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/Utils.java">
+      <file leaf-file-name="ObservationalData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ObservationalData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-              <folding>
-                <element signature="method#launch#0;class#Utils#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/templates/charts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="357">
+              <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WRFComponent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java">
+      <file leaf-file-name="TestArchiveDataOneHour.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataOneHour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-96">
-              <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+            <state relative-caret-position="21">
+              <caret line="192" column="21" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapCreator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="541">
+              <caret line="238" column="28" lean-forward="true" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -267,24 +131,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getDirectories</find>
-      <find>localFolder</find>
-      <find>nameFiles</find>
-      <find>javax.js</find>
-      <find>line</find>
-      <find>coordinates</find>
-      <find>getCoordinates</find>
-      <find>CSV</find>
-      <find>getCoordinatesCSV</find>
-      <find>coordinatesCSV</find>
-      <find>initialiazeCoordinates</find>
-      <find>System</find>
-      <find>sys</find>
-      <find>filePath</find>
-      <find>directory</find>
+      <find>diff</find>
+      <find>tempPresent</find>
+      <find>restCitiesFromSYNOP</find>
+      <find>allCitiesallCities</find>
+      <find>randomlyChoosenSetOfCities</find>
+      <find>randomlyCities</find>
+      <find>knownCitiesFromSYNOP</find>
+      <find>List\&lt;PointMap\&gt; points \= new ArrayList\&lt;\&gt;\(\)\;\n            for\(String city\: cities\) \{\n                PointMap p \= new PointMap\(citiesWithPredictedTemperatures\.get\(city\)\[i\]\, wrfComponent\.getCoordinates\(city\)\)\;\n                points\.add\(p\)\;\n            \}\n            map\.createCSVWithInterpolation\(\&quot;Excel\/\&quot; \+ date\.substring\(0\, 11\) \+ \(start \+ i\) \+ \&quot;\.csv\&quot;\, points\)\;\n            map\.createMapImage\(date\.substring\(0\, 11\) \+ \(start \+ i\)\, \'a\'\)\;</find>
+      <find>station</find>
+      <find>sourceFileWRF</find>
+      <find>wrfComponent</find>
+      <find>iteration</find>
+      <find>pathCrossValidation</find>
+      <find>rmse to</find>
       <find>wrf</find>
-      <find>rende</find>
-      <find>jar</find>
+      <find>filePath</find>
+      <find>maxIteration</find>
+      <find>stationsWithUnknownTemperature</find>
+      <find>rootElement</find>
+      <find>Iteration</find>
+      <find>Correct</find>
+      <find>amountCheckedFile</find>
+      <find>interpo</find>
+      <find>date</find>
+      <find>h</find>
+      <find>interpol</find>
+      <find>start</find>
+      <find>folderForLayers</find>
+      <find>stationsWithKnowTemperature</find>
+      <find>pathArchiveData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -298,33 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IMapCreator.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/PointMap.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateImg.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateImage.java" />
-        <option value="$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Implementation/SYNOPFactory.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IComponent.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/Station.java" />
-        <option value="$PROJECT_DIR$/webapp/CSS/style.css" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/header.html" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/views/header.html" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/SynopComponent.java" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/style.css" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/HelloWeb-servlet.xml" />
-        <option value="$PROJECT_DIR$/webapp/resources/style.css" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/views/glowny.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/spring/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/hello.html" />
-        <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/static/style.css" />
-        <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/script.js" />
-        <option value="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/connector/RequestFacade.class" />
-        <option value="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/connector/Request.class" />
-        <option value="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/coyote/Request.class" />
-        <option value="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/tomcat/util/http/Parameters.class" />
-        <option value="$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/WebvisualizerApplication.java" />
-        <option value="$PROJECT_DIR$/webvisualizer/ParserSources/pom.xml" />
-        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/ResourceConfig.java" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/WebConfig.java" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/helloform.html" />
@@ -334,10 +183,7 @@
         <option value="$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/validation/support/BindingAwareModelMap.class" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" />
         <option value="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar!/org/apache/logging/log4j/spi/AbstractLogger.class" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateJSON.java" />
-        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/Utils.java" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/template.html" />
@@ -345,10 +191,40 @@
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateChart.java" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/HomeController.java" />
         <option value="$PROJECT_DIR$/webvisualizer/src/main/resources/templates/charts.html" />
-        <option value="$PROJECT_DIR$/ParserSources/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/webvisualizer/pom.xml" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainPredict.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/places.xml" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainPrediction.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main4.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/Station.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Validation.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Prediction5Hour.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Prediction.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main2.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/resources/configuration.properties" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/PointMap.java" />
+        <option value="$PROJECT_DIR$/ParserSources/pom.xml" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/resources/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IComponent.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main3.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/resources/settings.properties" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/SynopComponent.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IMapCreator.java" />
         <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/Utils.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/CrossValidation.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestCompareResults.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/LeavePOutCrossValidation.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveData.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataSixHour.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestObservationDataSixHours.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ArchiveData.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainApplication.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ObservationalData.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java" />
+        <option value="$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataOneHour.java" />
       </list>
     </option>
   </component>
@@ -371,9 +247,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="667" />
-    <option name="y" value="76" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="134" />
+    <option name="y" value="184" />
     <option name="width" value="1920" />
     <option name="height" value="1030" />
   </component>
@@ -411,10 +287,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -425,106 +300,110 @@
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Implementation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
-              <item name="webvisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherPredictionProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherPredictionProject" type="462c0819:PsiDirectoryNode" />
+              <item name="ParserSources" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="Visualizer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.52327746" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15488215" />
+    <property name="project.structure.side.proportion" value="0.27091634" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ASUS/Desktop/HelloSpring/webapp/WEB-INF/web.xml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -540,6 +419,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="weatherpredictionproject" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -547,11 +430,15 @@
       <recent name="interf" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\ParserSources\src\main\resources" />
       <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\webvisualizer\src\main\resources\static\js" />
       <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\webvisualizer\src\main\resources" />
       <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\webvisualizer\src\main\resources\templates" />
       <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\webvisualizer\src\main\resources\dynamic" />
-      <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\webapp\WEB-INF\lib" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.parser.Tests" />
+      <recent name="pl.parser.Application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\Desktop\WeatherPredictionProject\src\main\resources" />
@@ -573,15 +460,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebvisualizerApplication">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TestArchiveDataOneHour">
+    <configuration name="LeavePOutCrossValidation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="pl.weather.downloader.App.*" />
+          <option name="PATTERN" value="pl.parser.Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="pl.weather.downloader.App.Main" />
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Tests.LeavePOutCrossValidation" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -590,17 +477,74 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="DownloaderResources" />
+      <module name="ParserSources" />
       <envs />
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="pl.parser.Application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="pl.parser.Application.Main" />
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Application.MainApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ParserSources" />
+      <envs />
+    </configuration>
+    <configuration name="TestArchiveDataOneHour" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.parser.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Tests.TestArchiveDataOneHour" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ParserSources" />
+      <envs />
+    </configuration>
+    <configuration name="TestCompareResults" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.parser.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Tests.TestCompareResults" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ParserSources" />
+      <envs />
+    </configuration>
+    <configuration name="TestObservationDataSixHours" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.parser.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Tests.TestObservationDataSixHours" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -683,6 +627,20 @@
           <artifact name="HelloSpring:war exploded" />
         </option>
       </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="pl.parser.Tests.TestObservationDataSixHours" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration name="WebvisualizerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -832,14 +790,23 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.WebvisualizerApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+    <list size="8">
+      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.WebvisualizerApplication" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MainApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestCompareResults" />
+      <item index="5" class="java.lang.String" itemvalue="Application.LeavePOutCrossValidation" />
+      <item index="6" class="java.lang.String" itemvalue="Application.TestArchiveDataOneHour" />
+      <item index="7" class="java.lang.String" itemvalue="Application.TestObservationDataSixHours" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestArchiveDataOneHour" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestObservationDataSixHours" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LeavePOutCrossValidation" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestCompareResults" />
       </list>
     </recent_temporary>
   </component>
@@ -923,51 +890,113 @@
       <workItem from="1521321113463" duration="9141000" />
       <workItem from="1521390555350" duration="650000" />
       <workItem from="1521391251918" duration="5802000" />
+      <workItem from="1521402813841" duration="606000" />
+      <workItem from="1521461019558" duration="116000" />
+      <workItem from="1521463689061" duration="1100000" />
+      <workItem from="1521552035272" duration="16942000" />
+      <workItem from="1521659113187" duration="4071000" />
+      <workItem from="1521704056442" duration="4922000" />
+      <workItem from="1521719872846" duration="27000" />
+      <workItem from="1521720115399" duration="2587000" />
+      <workItem from="1521754081871" duration="15111000" />
+      <workItem from="1521885330768" duration="7828000" />
+      <workItem from="1521968062321" duration="3190000" />
+      <workItem from="1521999811125" duration="2915000" />
+      <workItem from="1522056877079" duration="13340000" />
+      <workItem from="1522162717921" duration="562000" />
+      <workItem from="1522356507533" duration="419000" />
+      <workItem from="1522650264670" duration="14591000" />
+      <workItem from="1522682641158" duration="3995000" />
+      <workItem from="1522696459580" duration="910000" />
+      <workItem from="1522736316851" duration="6687000" />
+      <workItem from="1522754234299" duration="5330000" />
+      <workItem from="1522828159118" duration="8053000" />
+      <workItem from="1522863492495" duration="161000" />
+      <workItem from="1522864068256" duration="1503000" />
+      <workItem from="1522872343702" duration="102000" />
+      <workItem from="1522924930668" duration="1043000" />
+      <workItem from="1522994764581" duration="96000" />
+      <workItem from="1523010973852" duration="16297000" />
+      <workItem from="1523035935051" duration="3230000" />
+      <workItem from="1523084247527" duration="66000" />
+      <workItem from="1523088600170" duration="12102000" />
+      <workItem from="1523124773811" duration="129000" />
+      <workItem from="1523265100168" duration="323000" />
+      <workItem from="1523273683334" duration="1185000" />
+      <workItem from="1523281197060" duration="1960000" />
+      <workItem from="1523297438276" duration="144000" />
+      <workItem from="1523439696178" duration="2369000" />
+      <workItem from="1523443040412" duration="145000" />
+      <workItem from="1523448994490" duration="914000" />
+      <workItem from="1523463421497" duration="7000" />
+      <workItem from="1523514843779" duration="43006000" />
+      <workItem from="1523861087899" duration="26250000" />
+      <workItem from="1523947443665" duration="3203000" />
+      <workItem from="1523966036915" duration="2694000" />
+      <workItem from="1523971285568" duration="110000" />
+      <workItem from="1524070314112" duration="5794000" />
+      <workItem from="1524078021222" duration="1331000" />
+      <workItem from="1524082307211" duration="1042000" />
+      <workItem from="1524085619254" duration="1377000" />
+      <workItem from="1524127559965" duration="17581000" />
+      <workItem from="1524219654011" duration="5649000" />
+      <workItem from="1524291100045" duration="22211000" />
+      <workItem from="1524659710024" duration="297000" />
+      <workItem from="1524672067915" duration="20409000" />
+      <workItem from="1524815801862" duration="6224000" />
+      <workItem from="1524896713847" duration="27245000" />
+      <workItem from="1524990306801" duration="984000" />
+      <workItem from="1525009229099" duration="9852000" />
+      <workItem from="1525081179388" duration="3559000" />
+      <workItem from="1525102061409" duration="1390000" />
+      <workItem from="1525104258320" duration="3645000" />
+      <workItem from="1525163008194" duration="689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287365000" />
+    <option name="totallyTimeSpent" value="647376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45400944" sideWeight="0.5042965" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.432783" sideWeight="0.5042965" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120300755" sideWeight="0.49380532" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11331901" sideWeight="0.49380532" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976415" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4162736" sideWeight="0.49570355" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45400944" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3514151" sideWeight="0.49570355" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31095597" sideWeight="0.49293286" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25402793" sideWeight="0.50706714" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29108486" sideWeight="0.48820755" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2244898" sideWeight="0.5117925" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="848" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23469388" sideWeight="0.5061947" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23469388" sideWeight="0.5061947" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -980,17 +1009,17 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Implementation/WRFFactory.java</url>
-          <line>63</line>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java</url>
+          <line>56</line>
           <properties />
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="425" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="198" />
+      <option name="time" value="550" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -999,314 +1028,85 @@
       </configuration>
     </watches-manager>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/tomcat/util/http/Parameters.class">
+    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="462">
+          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/connector/Request.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar!/org/apache/commons/math3/util/FastMath.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="632" column="0" lean-forward="false" selection-start-line="632" selection-start-column="0" selection-end-line="632" selection-end-column="0" />
+        <state relative-caret-position="76">
+          <caret line="842" column="0" lean-forward="false" selection-start-line="842" selection-start-column="0" selection-end-line="842" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/connector/RequestFacade.class">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainPredict.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="3570">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/SynopComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/ParserSources/pom.xml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/static/images/2018-03-09_10.png" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/InputSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/picture.png" />
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/ResourceConfig.java" />
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/picture.png" />
-    <entry file="file://$PROJECT_DIR$/webvisualizer/webvisualizer.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/WebConfig.java" />
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/static/images/2018-03-09_04.png" />
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/images/2018-03-09_04.png" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/util/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/validation/support/BindingAwareModelMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/ui/ModelMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/ui/ExtendedModelMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar!/org/apache/logging/log4j/spi/AbstractLogger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="1069" column="0" lean-forward="false" selection-start-line="1069" selection-start-column="0" selection-end-line="1069" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.0.4.RELEASE/spring-jcl-5.0.4.RELEASE.jar!/org/apache/commons/logging/LogFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/FusionCharts.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/places.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/picture.png" />
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainPrediction.java" />
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main2.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/helpers/AttributesImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="216" column="169" lean-forward="false" selection-start-line="216" selection-start-column="169" selection-end-line="216" selection-end-column="169" />
+        <state relative-caret-position="213">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/HomeController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/spring/FusionCharts.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/resources/configuration.properties" />
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/hello.html" />
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/Station.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="151">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/static/js/fusioncharts.charts.js">
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/resources/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/javax.json/1.1/javax.json-1.1.jar!/org/glassfish/json/JsonObjectBuilderImpl.class">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/resources/settings.properties" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/org/xml/sax/InputSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/target/classes/places.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/templates/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/static/images/picture.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DownloaderResources/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/pl.server:webvisualizer:0.0.1-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>pl.server:webvisualizer:0.0.1-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="" y="">pl.server:webvisualizer:0.0.1-SNAPSHOT</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.10.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.10.0/org.apache.logging.log4j:log4j-api:jar:2.10.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.0.0.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.25</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.0.0.RELEASE/org.yaml:snakeyaml:jar:1.19</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE/org.attoparser:attoparser:jar:2.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.9.RELEASE/org.unbescape:unbescape:jar:1.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.9.RELEASE/org.slf4j:slf4j-api:jar:1.7.25</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.0.0.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.4/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.4/com.fasterxml.jackson.core:jackson-core:jar:2.9.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.0.0.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.28</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.28</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.0.0.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.28</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.7.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.7.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.7.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.7.Final/com.fasterxml:classmate:jar:1.3.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework:spring-web:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework:spring-web:jar:5.0.4.RELEASE/org.springframework:spring-beans:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework:spring-webmvc:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework:spring-webmvc:jar:5.0.4.RELEASE/org.springframework:spring-aop:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.0.0.RELEASE/org.springframework:spring-webmvc:jar:5.0.4.RELEASE/org.springframework:spring-expression:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-test:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/junit:junit:jar:4.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.assertj:assertj-core:jar:3.9.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.mockito:mockito-core:jar:2.15.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.mockito:mockito-core:jar:2.15.0/net.bytebuddy:byte-buddy:jar:1.7.10</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.mockito:mockito-core:jar:2.15.0/net.bytebuddy:byte-buddy-agent:jar:1.7.10</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.mockito:mockito-core:jar:2.15.0/org.objenesis:objenesis:jar:2.6</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.springframework:spring-core:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.springframework:spring-core:jar:5.0.4.RELEASE/org.springframework:spring-jcl:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.springframework:spring-test:jar:5.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.0.0.RELEASE/org.xmlunit:xmlunit-core:jar:2.5.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/javax.xml.parsers:jaxp-api:jar:1.4.5</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/org.apache.ant:ant:jar:1.10.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/org.apache.ant:ant:jar:1.10.2/org.apache.ant:ant-launcher:jar:1.10.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1/org.apache.commons:commons-lang3:jar:3.7</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1/org.apache.commons:commons-text:jar:1.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1/commons-beanutils:commons-beanutils:jar:1.9.3</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1/commons-beanutils:commons-beanutils:jar:1.9.3/commons-logging:commons-logging:jar:1.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.opencsv:opencsv:jar:4.1/commons-beanutils:commons-beanutils:jar:1.9.3/commons-collections:commons-collections:jar:3.2.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.googlecode.json-simple:json-simple:jar:1.1.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/javax:javaee-web-api:jar:7.0</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/javax.json:javax.json-api:jar:1.1.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/org.glassfish:javax.json:jar:1.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/org.apache.commons:commons-math3:jar:3.6.1</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/org.springframework:spring-context:jar:5.0.4.RELEASE</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/com.google.code.gson:gson:jar:2.8.2</node>
-            <node x="" y="">com.spring:ParserSources:jar:1.0-SNAPSHOT/javax.servlet:jstl:jar:1.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-devtools:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-devtools:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot:jar:2.0.0.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-devtools:jar:2.0.0.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.0.0.RELEASE</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9686340640809442" x="1423.8002547762799" y="846.660611757082" />
-          <SelectedNodes />
-          <Categories />
-          <VISIBILITY>All</VISIBILITY>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1314,88 +1114,219 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/test/java/pl/server/webvisualizer/WebvisualizerApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="307">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="150">
+          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar!/org/apache/commons/math3/util/Precision.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/WebvisualizerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="129">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="67" column="48" lean-forward="false" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-          <folding>
-            <element signature="method#launch#0;class#Utils#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="819">
+          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main.java" />
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main3.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="375" column="0" lean-forward="false" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/weather/presentation/ShowDatas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Api/ISources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Api/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Visualizer/GenerateChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IMapCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Implementation/WRFFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1365">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DownloaderResources/src/main/java/pl/weather/downloader/Implementation/SYNOPFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/PointMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/SynopComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1302">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/LeavePOutCrossValidation.java" />
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestCompareResults.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="1537" column="0" lean-forward="false" selection-start-line="1537" selection-start-column="0" selection-end-line="1537" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Api/IComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/resources/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Domain/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.1/opencsv-4.1.jar!/com/opencsv/CSVReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestObservationDataSixHours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2701">
+          <caret line="317" column="40" lean-forward="false" selection-start-line="317" selection-start-column="40" selection-end-line="317" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/WRFComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="65" column="19" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        <state relative-caret-position="21">
+          <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/Main.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ObservationalData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/java/pl/server/webvisualizer/Controller/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/ArchiveData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state relative-caret-position="2835">
+          <caret line="157" column="13" lean-forward="false" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webvisualizer/src/main/resources/templates/charts.html">
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Application/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="210">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Tests/TestArchiveDataOneHour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="192" column="21" lean-forward="false" selection-start-line="192" selection-start-column="21" selection-end-line="192" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParserSources/src/main/java/pl/parser/Implementation/MapCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="238" column="28" lean-forward="true" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1406,11 +1337,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>DownloaderResources:jar</last-edited>
+          <last-edited>ParserSources:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27091634" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1423,7 +1354,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.52327746" />
+                <option value="0.27091634" />
               </list>
             </option>
           </splitter-proportions>
@@ -1434,7 +1365,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27091634" />
               </list>
             </option>
           </splitter-proportions>
@@ -1446,7 +1377,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27091634" />
               </list>
             </option>
           </splitter-proportions>
@@ -1454,11 +1385,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>webvisualizer</last-edited>
+          <last-edited>ParserSources</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.52327746" />
+                <option value="0.27091634" />
               </list>
             </option>
           </splitter-proportions>
@@ -1482,7 +1413,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.52327746" />
+                <option value="0.27091634" />
               </list>
             </option>
           </splitter-proportions>
@@ -1492,6 +1423,17 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="clean install" />
+    <option value="clean" />
+    <option value="clean -X" />
+    <option value="spring-boot:run" />
+    <option value="clean spring-boot:run" />
+    <option value="clean compile test" />
+    <option value="clean install site:run" />
+    <option value="clean install" />
+    <option value="clean" />
+    <option value="clean compile test" />
+    <option value="clean install site:run" />
     <option value="clean" />
     <option value="clean install" />
     <option value="clean -X" />

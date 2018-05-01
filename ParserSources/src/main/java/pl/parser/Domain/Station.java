@@ -5,6 +5,15 @@ public class Station {
     private String dateOfObservation;
     private double temperature;
     private int[] coordinatesCSV;
+    private String sourceFile;
+
+    public String getSourceFile() {
+        return sourceFile;
+    }
+
+    public void setSourceFile(String sourceFile) {
+        this.sourceFile = sourceFile;
+    }
 
     public Station(String nameStation, String dateOfObservation) {
         this.nameStation = nameStation;

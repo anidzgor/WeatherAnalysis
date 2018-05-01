@@ -1,6 +1,7 @@
 package pl.parser.Implementation;
 
 import com.opencsv.CSVReader;
+import org.apache.commons.math3.util.Precision;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,13 +19,18 @@ import java.util.List;
 
 public class WRFComponent implements IComponent {
     public static String pathSources = "C:/KSG/WRF/";
+    private String sourceFileWRF;
 
-    private int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
+    public String getSourceFileWRF() {
+        return sourceFileWRF;
+    }
 
-        File file = new File("src/main/resources/places.xml");
+    public int[] getCoordinates(String city) throws ParserConfigurationException, IOException, SAXException {
+
+        File file = new File("C:/KSG/Resources/places.xml");
 
         double startCoordLatitude = 48.8;
-        double startCoordLongiture = 13.2;
+        double startCoordLongiture = 13.24;
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -55,15 +61,16 @@ public class WRFComponent implements IComponent {
         File file = new File(filePath);
         CSVReader reader = new CSVReader(new FileReader(file));
         List<String[]> csvBody = reader.readAll();
-        String result = csvBody.get(row+1)[col+1];
+        String result = csvBody.get(row-1)[col-1];
 
         double celsius = Float.parseFloat(result) - 273.15;
+        celsius = Precision.round(celsius, 2);
         reader.close();
 
         return new Float(celsius);
     }
 
-    public Station getTemperatures(String nameStation, String dateMeasure) {
+    public Station getTemperature(String nameStation, String dateMeasure) {
         Station station = new Station(nameStation, dateMeasure);
         int[] coordinates = new int[0];
         try {
@@ -89,6 +96,8 @@ public class WRFComponent implements IComponent {
             newestFolder = file.getName();
         }
 
+        station.setSourceFile(pathSources + newestFolder);
+
         //Set month
         if(parseDate.substring(2, 4).startsWith("0"))
             newestFolder += "/" + parseDate.substring(3, 4);
@@ -103,13 +112,13 @@ public class WRFComponent implements IComponent {
 
         //Set hour and choose properly file
         File file = new File(pathSources + newestFolder + "/" + Integer.parseInt(dateMeasure.substring(11, 13)));
+        sourceFileWRF = file.getAbsolutePath();
 
         try {
             station.setTemperature(readCellFromCSV(pathSources + newestFolder + "/" + file.getName() + "/SHELTER_TEMPERATURE.csv", coordinates[0], coordinates[1]));
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("No neccessary files WRF");
         }
-
         return station;
     }
 }

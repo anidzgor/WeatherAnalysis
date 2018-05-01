@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: library.jar
+Main-Class: pl.weather.downloader.App.Main
